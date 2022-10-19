@@ -6,7 +6,7 @@
   <link href="https://billzid.github.io/atom.xml" rel="self"/>
   
   <link href="https://billzid.github.io/"/>
-  <updated>2022-10-19T04:05:08.707Z</updated>
+  <updated>2022-10-19T11:44:05.948Z</updated>
   <id>https://billzid.github.io/</id>
   
   <author>
@@ -17,42 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>blog start</title>
-    <link href="https://billzid.github.io/2022/10/19/blog-start/"/>
-    <id>https://billzid.github.io/2022/10/19/blog-start/</id>
-    <published>2022-10-19T04:00:21.000Z</published>
-    <updated>2022-10-19T04:05:08.707Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;测试博客&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    
-    <category term="开始" scheme="https://billzid.github.io/tags/%E5%BC%80%E5%A7%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="https://billzid.github.io/2022/10/19/hello-world/"/>
     <id>https://billzid.github.io/2022/10/19/hello-world/</id>
-    <published>2022-10-19T03:29:50.093Z</published>
-    <updated>2022-10-19T03:28:22.227Z</updated>
+    <published>2022-10-19T11:00:24.000Z</published>
+    <updated>2022-10-19T11:44:05.948Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;p&gt;这是网站搭建后第一篇测试博客！欢迎来到我的个人网站！源码放在&lt;a href=&quot;https://github.com/BillZid&quot;&gt;github主页&lt;/a&gt;上，欢迎多多交流！&lt;/p&gt;
+&lt;h2 id=&quot;插入代码&quot;&gt;&lt;a href=&quot;#插入代码&quot;</summary>
         
       
     
