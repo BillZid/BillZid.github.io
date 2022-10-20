@@ -6,7 +6,7 @@
   <link href="https://billzid.github.io/atom.xml" rel="self"/>
   
   <link href="https://billzid.github.io/"/>
-  <updated>2022-10-19T15:44:13.024Z</updated>
+  <updated>2022-10-20T10:23:03.777Z</updated>
   <id>https://billzid.github.io/</id>
   
   <author>
@@ -21,20 +21,26 @@
     <link href="https://billzid.github.io/2022/10/19/hello-world/"/>
     <id>https://billzid.github.io/2022/10/19/hello-world/</id>
     <published>2022-10-19T11:00:24.000Z</published>
-    <updated>2022-10-19T15:44:13.024Z</updated>
+    <updated>2022-10-20T10:23:03.777Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;这是网站搭建后第一篇测试博客！欢迎来到我的个人网站！源码放在&lt;a href=&quot;https://github.com/BillZid&quot;&gt;github主页&lt;/a&gt;上，欢迎多多交流！&lt;/p&gt;
-&lt;h2 id=&quot;插入代码&quot;&gt;&lt;a href=&quot;#插入代码&quot;</summary>
+    <summary type="html">&lt;p&gt;这是&lt;em&gt;网站&lt;/em&gt;搭建后&lt;strong&gt;第一篇&lt;/strong&gt;测试博客！&lt;code&gt;欢迎&lt;/code&gt;来到我的个人网站！&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;源码&lt;/strong&gt;&lt;/em&gt; 放在&lt;a</summary>
         
       
     
     
     
+    <category term="随笔" scheme="https://billzid.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="测试" scheme="https://billzid.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="日常" scheme="https://billzid.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
