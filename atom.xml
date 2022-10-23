@@ -6,7 +6,7 @@
   <link href="https://billzid.github.io/atom.xml" rel="self"/>
   
   <link href="https://billzid.github.io/"/>
-  <updated>2022-10-22T08:11:55.561Z</updated>
+  <updated>2022-10-23T14:45:08.434Z</updated>
   <id>https://billzid.github.io/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Attention Is All You Need</title>
+    <link href="https://billzid.github.io/attention-is-all-you-need/"/>
+    <id>https://billzid.github.io/attention-is-all-you-need/</id>
+    <published>2022-10-23T14:42:07.000Z</published>
+    <updated>2022-10-23T14:45:08.434Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Transformer: 基于多头自注意力机制进行序列到序列的encoder-decoder架构，完全摒弃循环层和卷积层，nlp领域大山头！&lt;/p&gt;
+&lt;h2 id=&quot;论文十问&quot;&gt;&lt;a href=&quot;#论文十问&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="论文精读" scheme="https://billzid.github.io/categories/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/"/>
+    
+    
+    <category term="NLP" scheme="https://billzid.github.io/tags/NLP/"/>
+    
+    <category term="Transformer" scheme="https://billzid.github.io/tags/Transformer/"/>
+    
+    <category term="Self-Attention" scheme="https://billzid.github.io/tags/Self-Attention/"/>
+    
+    <category term="Mask" scheme="https://billzid.github.io/tags/Mask/"/>
+    
+    <category term="Multi-Head Attention" scheme="https://billzid.github.io/tags/Multi-Head-Attention/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="https://billzid.github.io/hello-world/"/>
     <id>https://billzid.github.io/hello-world/</id>
     <published>2022-10-19T11:00:24.000Z</published>
-    <updated>2022-10-22T08:11:55.561Z</updated>
+    <updated>2022-10-23T14:44:10.391Z</updated>
     
     
       
@@ -35,12 +69,10 @@
     
     
     
-    <category term="随笔" scheme="https://billzid.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔记录" scheme="https://billzid.github.io/categories/%E9%9A%8F%E7%AC%94%E8%AE%B0%E5%BD%95/"/>
     
     
-    <category term="测试" scheme="https://billzid.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-    <category term="日常" scheme="https://billzid.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    <category term="网站测试" scheme="https://billzid.github.io/tags/%E7%BD%91%E7%AB%99%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   

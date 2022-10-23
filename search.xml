@@ -4,25 +4,56 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/hello-world/"/>
-      <url>/hello-world/</url>
+      <title>Attention Is All You Need</title>
+      <link href="/attention-is-all-you-need/"/>
+      <url>/attention-is-all-you-need/</url>
       
-        <content type="html"><![CDATA[<p>这是<em>网站</em>搭建后<strong>第一篇</strong>测试博客！<code>欢迎</code>来到我的个人网站！</p><p><em><strong>源码</strong></em> 放在<a href="https://github.com/BillZid">github主页</a>上。</p><blockquote><p><del>求你看看</del></p><blockquote><p>多多交流！</p></blockquote></blockquote><hr><h2 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">hello_world</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello World!"</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>还可以<code>print("Hello again!")</code></p><h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><center><img src="01.jpg" width="50%" height="50%"><p>可爱小天依</p></center><h2 id="插入pdf"><a href="#插入pdf" class="headerlink" title="插入pdf"></a>插入pdf</h2><div class="row">    <embed src="1.pdf" width="100%" height="550" type="application/pdf"></div><h2 id="插入表格"><a href="#插入表格" class="headerlink" title="插入表格"></a>插入表格</h2><table><thead><tr><th align="left">001</th><th align="left">002</th><th align="left">003</th></tr></thead><tbody><tr><td align="left">数学</td><td align="left">计算机</td><td align="left">管科</td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<p>Transformer: 基于多头自注意力机制进行序列到序列的encoder-decoder架构，完全摒弃循环层和卷积层，nlp领域大山头！</p><h2 id="论文十问"><a href="#论文十问" class="headerlink" title="论文十问"></a>论文十问</h2><p>由 <a href="https://readpaper.com/"><em>ReadPaper平台</em></a> 提出，有助于总结信息，构建认知模型。</p><blockquote><ol><li>论文试图解决什么问题？<blockquote><p>在机器翻译、句法分析等nlp任务上取得好成绩，进行更准确的序列转化（编-解码）。出发点在于基于CNN、RNN的模型在长距离依赖下的限制，更好的进行并行计算。</p></blockquote></li><li>这是否是一个新的问题？<blockquote><p>不是新问题，但是是一个全新的思路。</p></blockquote></li><li>这篇文章要验证一个什么科学假设？<blockquote><p>在序列到序列学习中，用（多头）自注意力机制替代循环层、卷积层，可以取得很好的结果。</p></blockquote></li><li>有哪些相关研究？如何归类？谁是这一课题在领域内值得关注的研究员？<blockquote><p>暂略</p></blockquote></li><li>论文中提到的解决方案之关键是什么？<blockquote><p>用（多头）自注意力机制完全替代循环层和卷积层、位置编码、适当位置加入前馈神经网络、注意力机制的多层灵活运用。</p></blockquote></li><li>论文中的实验是如何设计的？<blockquote><p>在公开数据集上训练，和其他模型作比较，并控制变量评估了模型中各个部分所带来的精度影响。</p></blockquote></li><li>用于定量评估的数据集是什么？代码有没有开源？<blockquote><p>WMT 2014 English-German dataset，WMT 2014 English-French dataset，Wall Street Journal (WSJ) portion of the Penn Treebank（宾州树库），已经在 <a href="https://github.com/tensorflow/tensor2tensor">https://github.com/tensorflow/tensor2tensor</a> 上开源模型。</p></blockquote></li><li>论文中的实验及结果有没有很好地支持需要验证的科学假设？<blockquote><p>实验结果相当乐观，在机器翻译和句法分析等nlp任务上取得了截止论文发表时最高的评分。</p></blockquote></li><li>这篇论文到底有什么贡献？<blockquote><p>提出了一套革命式的nlp研究框架。</p></blockquote></li><li>下一步呢？有什么工作可以继续深入？<blockquote><p>扩展到其他领域（音视频图像，以及其他类型的序列到序列学习领域），模型变种（基本被卷王们做完了）。</p></blockquote></li></ol></blockquote><p>还可以点击这里参考<a href="https://readpaper.com/paper/2963403868/questions-detail?questionId=534901540122656768">公开回答</a></p><h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p>待绘制添加</p><table><thead><tr><th><img src="tianyi.jpg" width="30%"></th></tr></thead><tbody><tr><td><center>可爱小天依镇楼</center></td></tr></tbody></table><table><thead><tr><th><img src="1.jpg" width="300/"></th></tr></thead><tbody><tr><td><center>模型框架图</center></td></tr></tbody></table><table><thead><tr><th><img src="2.jpg" width="300/"></th><th><img src="3.jpg" width="300/"></th></tr></thead><tbody><tr><td><center>注意力模型</center></td><td><center>参数影响测试</center></td></tr></tbody></table><h2 id="文章共读"><a href="#文章共读" class="headerlink" title="文章共读"></a>文章共读</h2><p><a href="attention.pdf">注意力机制参考资料</a><br>暂待补充</p><h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ol><li>自注意力机制(Q,K,V结构)本质是向量信息的交叉（交互）？是否流于形式，可以简化吗？可以拓展吗？<br>$ Q K^T = X W_q W_k^T X^T $, 其中 $ X = [X_1;X_2;…X_n] $…</li><li>positional encodings直接和word embeddings做和，是否不妥，实际含义为何？（词本身的含义与位置相关？如果用依存句法分析树来编码？），用向量拼接的方式怎么样（存在维数控制问题？）</li></ol><h2 id="原文-amp-个人标注"><a href="#原文-amp-个人标注" class="headerlink" title="原文 &amp; 个人标注"></a>原文 &amp; 个人标注</h2><p><a href="1.pdf">PDF下载链接</a></p><div class="row">    <embed src="1.pdf" width="100%" height="550" type="application/pdf"></div><h2 id="外文写作"><a href="#外文写作" class="headerlink" title="外文写作"></a>外文写作</h2><h3 id="用词"><a href="#用词" class="headerlink" title="用词"></a>用词</h3><table><thead><tr><th align="left">词语</th><th align="left">文中释义</th><th align="left">词语</th><th align="left">文中释义</th></tr></thead><tbody><tr><td align="left">auto-regressive</td><td align="left">自动回归的</td><td align="left">albeit</td><td align="left">尽管</td></tr><tr><td align="left">stacked</td><td align="left">堆叠的</td><td align="left">residual connection</td><td align="left">残差连接</td></tr><tr><td align="left">parallel</td><td align="left">并行</td><td align="left">simultaneously</td><td align="left">同时</td></tr><tr><td align="left">additive attention</td><td align="left">累积注意力</td><td align="left">compatibility function</td><td align="left">兼容函数</td></tr><tr><td align="left">in magnitude</td><td align="left">在规模上</td><td align="left">concatenate</td><td align="left">连接</td></tr><tr><td align="left">mimics</td><td align="left">模仿</td><td align="left">hypothesize</td><td align="left">假定</td></tr><tr><td align="left">extrapolate to</td><td align="left">外推到</td><td align="left">interpretable</td><td align="left">可解释的</td></tr><tr><td align="left">training regime</td><td align="left">训练机制</td><td align="left"></td><td align="left"></td></tr></tbody></table><h3 id="用句"><a href="#用句" class="headerlink" title="用句"></a>用句</h3><blockquote><ul><li>left and right halves of Figure 1<blockquote><p>图一的左右半部分</p></blockquote></li><li>as depicted in Figure 2.<blockquote><p>如图二所示</p></blockquote></li></ul></blockquote><h2 id="复现-amp-运用技巧"><a href="#复现-amp-运用技巧" class="headerlink" title="复现 &amp; 运用技巧"></a>复现 &amp; 运用技巧</h2><p>暂待</p>]]></content>
       
       
       <categories>
           
-          <category> 随笔 </category>
+          <category> 论文精读 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 测试 </tag>
+            <tag> NLP </tag>
             
-            <tag> 日常 </tag>
+            <tag> Transformer </tag>
+            
+            <tag> Self-Attention </tag>
+            
+            <tag> Mask </tag>
+            
+            <tag> Multi-Head Attention </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/hello-world/"/>
+      <url>/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>这是<em>网站</em>搭建后<strong>第一篇</strong>测试博客！<code>欢迎</code>来到我的个人网站！</p><p><em><strong>源码</strong></em> 放在<a href="https://github.com/BillZid">github主页</a>上。</p><blockquote><p><del>求你看看</del></p><blockquote><p>多多交流！</p></blockquote></blockquote><hr><h2 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">hello_world</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello World!"</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>还可以<code>print("Hello again!")</code></p><h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><center><img src="01.jpg" width="30%" height="30%"><p>可爱小天依</p></center><h2 id="插入pdf"><a href="#插入pdf" class="headerlink" title="插入pdf"></a>插入pdf</h2><div class="row">    <embed src="1.pdf" width="100%" height="550" type="application/pdf"></div><h2 id="插入表格"><a href="#插入表格" class="headerlink" title="插入表格"></a>插入表格</h2><table><thead><tr><th align="left">001</th><th align="left">002</th><th align="left">003</th></tr></thead><tbody><tr><td align="left">数学</td><td align="left">计算机</td><td align="left">管科</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网站测试 </tag>
             
         </tags>
       
