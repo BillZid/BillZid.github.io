@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, Bill Z的博客">
+    <meta name="keywords" content="标签: 复杂网络, Bill Z的博客">
     <meta name="description" content="Bill Z的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | Bill Z的博客</title>
+    <title>标签: 复杂网络 | Bill Z的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -361,118 +361,132 @@
 
     
 
-<div id="category-cloud" class="container chip-container">
+<div id="tags" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
             </div>
             <div class="tag-chips">
                 
                 
-                
-                <a href="/categories/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/" title="论文精读: 1">
+                <a href="/tags/NLP/" title="NLP: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">论文精读
+                            data-tagname="NLP" style="background-color: #F9EBEA;">NLP
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="课程笔记: 1">
+                <a href="/tags/Transformer/" title="Transformer: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">课程笔记
+                            data-tagname="Transformer" style="background-color: #F5EEF8;">Transformer
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E9%9A%8F%E7%AC%94%E8%AE%B0%E5%BD%95/" title="随笔记录: 1">
+                <a href="/tags/Self-Attention/" title="Self-Attention: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">随笔记录
+                            data-tagname="Self-Attention" style="background-color: #D5F5E3;">Self-Attention
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" title="自学笔记: 1">
+                <a href="/tags/Mask/" title="Mask: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">自学笔记
+                            data-tagname="Mask" style="background-color: #E8F8F5;">Mask
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
+                
+                <a href="/tags/Multi-Head-Attention/" title="Multi-Head Attention: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Multi-Head Attention" style="background-color: #FEF9E7;">Multi-Head Attention
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%BD%91%E7%AB%99%E6%B5%8B%E8%AF%95/" title="网站测试: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="网站测试" style="background-color: #F8F9F9;">网站测试
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/python/" title="python: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="python" style="background-color: #82E0AA;">python
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%A4%8D%E6%9D%82%E7%BD%91%E7%BB%9C/" title="复杂网络: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="复杂网络" style="background-color: #D7BDE2;">复杂网络
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
                 
             </div>
         </div>
     </div>
 </div>
 
-
-    
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
-
     
 
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"论文精读","max":2},{"name":"课程笔记","max":2},{"name":"随笔记录","max":2},{"name":"自学笔记","max":2}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [1,1,1,1],
-                    name : '文章分类数量'
-                }
-            ]
-        }]
-    };
-
-    radarChart.setOption(option);
-</script>
-
-    
-
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="复杂网络" data-aos="fade-up">
+                <div class="card">
+                    <a href="/fu-za-xi-tong-yu-fu-za-wang-luo/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="复杂系统与复杂网络">
+                            
+                            <span class="card-title">复杂系统与复杂网络</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-26
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-category">
+                                课程笔记
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">

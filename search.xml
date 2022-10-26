@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>python</title>
+      <link href="/python/"/>
+      <url>/python/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>求数组某行某列的最大值(最小值)</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> npa <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>              <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>amax<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求所有数字中的最大值</span><span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>amax<span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一列的最大值组成列表</span><span class="token triple-quoted-string string">'''对a=a[n0][n1],axis=0时,对应n0已经确定下来,即n0取值定为0,1,遍历n0.所以此时的amax就是固定n1,amax[n1] = max(a[0][n1],a[1][n1]),表现为按列取最大值'''</span><span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>amax<span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一行的最大值组成列表</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-output" data-language="output"><code class="language-output">5[2 5][5 3]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li><p>矩阵点积与向量外积</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> npa <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>              <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>b <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>              <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>c <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>d <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 就是数学上的矩阵乘法</span><span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>outer<span class="token punctuation">(</span>c<span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token triple-quoted-string string">'''向量外积,也就是m维向量和n维向量之间,做(m,1)和(1,n)到(m,n)的矩阵乘法,有效解决numpy中(k,)维向量的歧义'''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-output" data-language="output"><code class="language-output">[[15 20] [11 16]][[ 6 15] [ 8 20]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>矩阵(多维数组)求和</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> npa <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>              <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 所有维度求和</span><span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一列的和</span><span class="token triple-quoted-string string">'''对a=a[n0][n1],axis=0时,对应n0已经确定下来,即n0取值定为0,1,遍历n0.所以此时的sum就是固定n1,sum[n1] = a[0][n1]+a[1][n1],表现为按列求和'''</span><span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一行的和</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-output" data-language="output"><code class="language-output">10[2 8][5 5]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 自学笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>复杂系统与复杂网络</title>
+      <link href="/fu-za-xi-tong-yu-fu-za-wang-luo/"/>
+      <url>/fu-za-xi-tong-yu-fu-za-wang-luo/</url>
+      
+        <content type="html"><![CDATA[<h2 id="课程信息"><a href="#课程信息" class="headerlink" title="课程信息"></a>课程信息</h2><p>参考用书<br>1、Networks Crowds and Markets: Reasoning about a Highly Connected World David Easley and Jon Kleinberg 2010年 Cambridge University Press</p><p>课程教师信息<br>课程首席教授郑晓龙研究员，在社会计算、知识图谱和大数据解析学的基础理论研究、关键技术研发和系统平台建设等方面系取得了丰富的研究成果。</p><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul><li>强弱关系：紧密频繁或偶然</li><li>结构洞</li><li>嵌入性：在四边形ABCD中连接AC，反映了AC之间关系的可靠性</li><li>桥：AB间的唯一路径 -&gt; 捷径：去除AB连边会让他们距离增加2以上</li><li>社会资本：人们在社会（社会网络）结构中所处的位置给他们带来的资源<ul><li>契结资本：强连接，表达性行动，情感</li><li>工具资本：弱连接，工具性</li></ul></li><li>正关系和负关系</li><li>结构平衡（三者皆是敌人导致敌人的敌人仍是敌人）</li><li>网络影响力：依赖性，排他性，饱和性，介数</li><li>核心-外围结构</li><li>网络社区发现：节点要求，集合要求，互不重叠，层次化社区结构，如何提取隐藏的社区结构</li><li><strong>激活扩散理论</strong> ：一个概念被激活，其效应可以扩散到与其相关联的其他节点，<em>NLP相关</em></li><li>注意力网络：近因，首因，边际递减效应</li><li>流行语传播网络：信息模因（Meme）<ul><li>信息在人群中传播就像基因一样，会不断复制和演化</li><li>基于网络的群体情感行为演化</li></ul></li><li>网络中的同质现象：由节点主动选择（选择相似特征【或自己所喜欢的特征？】的朋友）和被动影响（成朋友之后的影响）交错而成</li><li>从众行为：信息效应，直接受益效应<ul><li>信息效应：根据有限的信息进行合理推理，和模仿顺从不同，“信息级联”</li><li>理性状态下的认知失衡</li></ul></li></ul><h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ul><li>动态网络</li><li>现有社交网络（推特、微博等数据集）中缺乏负关系（对抗敌对）的挖掘与应用</li><li>无向图中负号偶数是平衡，有向图中负号奇数是有效调节</li><li>同质性，“圈层”</li><li>激活扩散中，概念如何更高效准确的储存和调用（进化？）</li></ul><h2 id="课程研讨记录"><a href="#课程研讨记录" class="headerlink" title="课程研讨记录"></a>课程研讨记录</h2><p>班上同学的研讨和idea分享，待学习补充</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 课程笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 复杂网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Attention Is All You Need</title>
       <link href="/attention-is-all-you-need/"/>
       <url>/attention-is-all-you-need/</url>
