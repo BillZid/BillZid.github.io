@@ -419,9 +419,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li><p>求数组某行某列的最大值(最小值)</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+                <ol type="1">
+<li><p>求数组某行某列的最大值(最小值) </p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
 a <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
               <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -432,9 +431,8 @@ a <span class="token operator">=</span> np<span class="token punctuation">.</spa
 <span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>amax<span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一行的最大值组成列表</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-output" data-language="output"><code class="language-output">5
 [2 5]
-[5 3]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
-<li><p>矩阵点积与向量外积</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+[5 3]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p></p></li>
+<li><p>矩阵点积与向量外积 </p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
 a <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
               <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -444,14 +442,11 @@ c <span class="token operator">=</span> np<span class="token punctuation">.</spa
 d <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 就是数学上的矩阵乘法</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>outer<span class="token punctuation">(</span>c<span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token triple-quoted-string string">'''向量外积,也就是m维向量和n维向量之间,
-做(m,1)和(1,n)到(m,n)的矩阵乘法,有效解决numpy中(k,)维向量的歧义'''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-output" data-language="output"><code class="language-output">[[15 20]
+做(m,1)和(1,n)到(m,n)的矩阵乘法,有效解决numpy中(k,)维向量的歧义'''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre> <pre class="line-numbers language-output" data-language="output"><code class="language-output">[[15 20]
  [11 16]]
 [[ 6 15]
- [ 8 20]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>矩阵(多维数组)求和</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+ [ 8 20]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p></p></li>
+<li><p>矩阵(多维数组)求和 </p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
 a <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
               <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -459,10 +454,9 @@ a <span class="token operator">=</span> np<span class="token punctuation">.</spa
 <span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一列的和</span>
 <span class="token triple-quoted-string string">'''对a=a[n0][n1],axis=0时,对应n0已经确定下来,即n0取值定为0,1,遍历n0.
 所以此时的sum就是固定n1,sum[n1] = a[0][n1]+a[1][n1],表现为按列求和'''</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一行的和</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-output" data-language="output"><code class="language-output">10
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一行的和</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre> <pre class="line-numbers language-output" data-language="output"><code class="language-output">10
 [2 8]
-[5 5]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+[5 5]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p></p></li>
 </ol>
 
                 
@@ -869,47 +863,49 @@ a <span class="token operator">=</span> np<span class="token punctuation">.</spa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/python/">
+                <a href="/bei-tao-yan-de-yong-qi-shu-zhai/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="python">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="被讨厌的勇气-书摘">
                         
-                        <span class="card-title">python</span>
+                        <span class="card-title">被讨厌的勇气-书摘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python小知识点积累
+                            怎样采用“目的论”的角度去生活？愤怒都是捏造出来的吗？一起来探究 阿德勒的心理学
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-06
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    自学笔记
+                            <a href="/categories/%E4%B9%A6%E6%91%98/" class="post-category">
+                                    书摘
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/">
+                        <span class="chip bg-color">心理学</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%93%B2%E5%AD%A6/">
+                        <span class="chip bg-color">哲学</span>
                     </a>
                     
                 </div>
@@ -1141,7 +1137,7 @@ a <span class="token operator">=</span> np<span class="token punctuation">.</spa
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.9k</span>&nbsp;字
+                class="white-color">9.5k</span>&nbsp;字
             
             
             

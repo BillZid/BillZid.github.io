@@ -410,7 +410,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    873
+                    862
                 </div>
                 
 
@@ -435,172 +435,165 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Transformer: 基于多头自注意力机制进行序列到序列的encoder-decoder架构，完全摒弃循环层和卷积层，nlp领域大山头！</p>
-<h2 id="论文十问"><a href="#论文十问" class="headerlink" title="论文十问"></a>论文十问</h2><p>由 <a target="_blank" rel="noopener" href="https://readpaper.com/"><em>ReadPaper平台</em></a> 提出，有助于总结信息，构建认知模型。</p>
+                <p>Transformer:
+基于多头自注意力机制进行序列到序列的encoder-decoder架构，完全摒弃循环层和卷积层，nlp领域大山头！</p>
+<h2 id="论文十问">论文十问</h2>
+<p>由 <a target="_blank" rel="noopener" href="https://readpaper.com"><em>ReadPaper平台</em></a>
+提出，有助于总结信息，构建认知模型。</p>
 <blockquote>
-<ol>
-<li>论文试图解决什么问题？<blockquote>
-<p>在机器翻译、句法分析等nlp任务上取得好成绩，进行更准确的序列转化（编-解码）。出发点在于基于CNN、RNN的模型在长距离依赖下的限制，更好的进行并行计算。</p>
-</blockquote>
-</li>
-<li>这是否是一个新的问题？<blockquote>
-<p>不是新问题，但是是一个全新的思路。</p>
-</blockquote>
-</li>
-<li>这篇文章要验证一个什么科学假设？<blockquote>
-<p>在序列到序列学习中，用（多头）自注意力机制替代循环层、卷积层，可以取得很好的结果。</p>
-</blockquote>
-</li>
-<li>有哪些相关研究？如何归类？谁是这一课题在领域内值得关注的研究员？<blockquote>
-<p>暂略</p>
-</blockquote>
-</li>
-<li>论文中提到的解决方案之关键是什么？<blockquote>
-<p>用（多头）自注意力机制完全替代循环层和卷积层、位置编码、适当位置加入前馈神经网络、注意力机制的多层灵活运用。</p>
-</blockquote>
-</li>
-<li>论文中的实验是如何设计的？<blockquote>
-<p>在公开数据集上训练，和其他模型作比较，并控制变量评估了模型中各个部分所带来的精度影响。</p>
-</blockquote>
-</li>
-<li>用于定量评估的数据集是什么？代码有没有开源？<blockquote>
-<p>WMT 2014 English-German dataset，WMT 2014 English-French dataset，Wall Street Journal (WSJ) portion of the Penn Treebank（宾州树库），已经在 <a target="_blank" rel="noopener" href="https://github.com/tensorflow/tensor2tensor">https://github.com/tensorflow/tensor2tensor</a> 上开源模型。</p>
-</blockquote>
-</li>
-<li>论文中的实验及结果有没有很好地支持需要验证的科学假设？<blockquote>
-<p>实验结果相当乐观，在机器翻译和句法分析等nlp任务上取得了截止论文发表时最高的评分。</p>
-</blockquote>
-</li>
-<li>这篇论文到底有什么贡献？<blockquote>
-<p>提出了一套革命式的nlp研究框架。</p>
-</blockquote>
-</li>
-<li>下一步呢？有什么工作可以继续深入？<blockquote>
-<p>扩展到其他领域（音视频图像，以及其他类型的序列到序列学习领域），模型变种（基本被卷王们做完了）。</p>
-</blockquote>
-</li>
+<ol type="1">
+<li>论文试图解决什么问题？ &gt;
+在机器翻译、句法分析等nlp任务上取得好成绩，进行更准确的序列转化（编-解码）。出发点在于基于CNN、RNN的模型在长距离依赖下的限制，更好的进行并行计算。</li>
+<li>这是否是一个新的问题？ &gt; 不是新问题，但是是一个全新的思路。</li>
+<li>这篇文章要验证一个什么科学假设？ &gt;
+在序列到序列学习中，用（多头）自注意力机制替代循环层、卷积层，可以取得很好的结果。</li>
+<li>有哪些相关研究？如何归类？谁是这一课题在领域内值得关注的研究员？
+&gt; 暂略</li>
+<li>论文中提到的解决方案之关键是什么？ &gt;
+用（多头）自注意力机制完全替代循环层和卷积层、位置编码、适当位置加入前馈神经网络、注意力机制的多层灵活运用。</li>
+<li>论文中的实验是如何设计的？ &gt;
+在公开数据集上训练，和其他模型作比较，并控制变量评估了模型中各个部分所带来的精度影响。</li>
+<li>用于定量评估的数据集是什么？代码有没有开源？ &gt; WMT 2014
+English-German dataset，WMT 2014 English-French dataset，Wall Street
+Journal (WSJ) portion of the Penn Treebank（宾州树库），已经在 <a target="_blank" rel="noopener" href="https://github.com/tensorflow/tensor2tensor" class="uri">https://github.com/tensorflow/tensor2tensor</a>
+上开源模型。</li>
+<li>论文中的实验及结果有没有很好地支持需要验证的科学假设？ &gt;
+实验结果相当乐观，在机器翻译和句法分析等nlp任务上取得了截止论文发表时最高的评分。</li>
+<li>这篇论文到底有什么贡献？ &gt; 提出了一套革命式的nlp研究框架。</li>
+<li>下一步呢？有什么工作可以继续深入？ &gt;
+扩展到其他领域（音视频图像，以及其他类型的序列到序列学习领域），模型变种（基本被卷王们做完了）。</li>
 </ol>
 </blockquote>
 <p>还可以点击这里参考<a target="_blank" rel="noopener" href="https://readpaper.com/paper/2963403868/questions-detail?questionId=534901540122656768">公开回答</a></p>
-<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p>待绘制添加</p>
+<h2 id="思维导图">思维导图</h2>
+<p>待绘制添加</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th><img src="tianyi.jpg" width="30%"></th>
 </tr>
 </thead>
-<tbody><tr>
-<td><center>可爱小天依镇楼</center></td>
+<tbody>
+<tr class="odd">
+<td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th><img src="1.jpg" width="300/"></th>
 </tr>
 </thead>
-<tbody><tr>
-<td><center>模型框架图</center></td>
+<tbody>
+<tr class="odd">
+<td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th><img src="2.jpg" width="300/"></th>
 <th><img src="3.jpg" width="300/"></th>
 </tr>
 </thead>
-<tbody><tr>
-<td><center>注意力模型</center></td>
-<td><center>参数影响测试</center></td>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
 </tr>
-</tbody></table>
-<h2 id="文章共读"><a href="#文章共读" class="headerlink" title="文章共读"></a>文章共读</h2><p><a href="attention.pdf">注意力机制参考资料</a><br>暂待补充</p>
-<h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ol>
-<li>自注意力机制(Q,K,V结构)本质是向量信息的交叉（交互）？是否流于形式，可以简化吗？可以拓展吗？<br>$ Q K^T = X W_q W_k^T X^T $, 其中 $ X = [X_1;X_2;…X_n] $…</li>
-<li>positional encodings直接和word embeddings做和，是否不妥，实际含义为何？（词本身的含义与位置相关？如果用依存句法分析树来编码？），用向量拼接的方式怎么样（存在维数控制问题？）</li>
+</tbody>
+</table>
+<h2 id="文章共读">文章共读</h2>
+<p><a href="attention.pdf">注意力机制参考资料</a> 暂待补充</p>
+<h2 id="ideas">Ideas</h2>
+<ol type="1">
+<li>自注意力机制(Q,K,V结构)本质是向量信息的交叉（交互）？是否流于形式，可以简化吗？可以拓展吗？
+$ Q K^T = X W_q W_k^T X^T $, 其中 $ X = [X_1;X_2;...X_n] $...</li>
+<li>positional encodings直接和word
+embeddings做和，是否不妥，实际含义为何？（词本身的含义与位置相关？如果用依存句法分析树来编码？），用向量拼接的方式怎么样（存在维数控制问题？）</li>
 </ol>
-<h2 id="原文-amp-个人标注"><a href="#原文-amp-个人标注" class="headerlink" title="原文 &amp; 个人标注"></a>原文 &amp; 个人标注</h2><p><a href="1.pdf">PDF下载链接</a></p>
+<h2 id="原文-个人标注">原文 &amp; 个人标注</h2>
+<p><a href="1.pdf">PDF下载链接</a> 
 
-
-	<div class="row">
+	</p><div class="row">
     <embed src="1.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
-
-
-<h2 id="外文写作"><a href="#外文写作" class="headerlink" title="外文写作"></a>外文写作</h2><h3 id="用词"><a href="#用词" class="headerlink" title="用词"></a>用词</h3><table>
+<p></p>
+<h2 id="外文写作">外文写作</h2>
+<h3 id="用词">用词</h3>
+<table>
 <thead>
-<tr>
-<th align="left">词语</th>
-<th align="left">文中释义</th>
-<th align="left">词语</th>
-<th align="left">文中释义</th>
+<tr class="header">
+<th style="text-align: left;">词语</th>
+<th style="text-align: left;">文中释义</th>
+<th style="text-align: left;">词语</th>
+<th style="text-align: left;">文中释义</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">auto-regressive</td>
-<td align="left">自动回归的</td>
-<td align="left">albeit</td>
-<td align="left">尽管</td>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">auto-regressive</td>
+<td style="text-align: left;">自动回归的</td>
+<td style="text-align: left;">albeit</td>
+<td style="text-align: left;">尽管</td>
 </tr>
-<tr>
-<td align="left">stacked</td>
-<td align="left">堆叠的</td>
-<td align="left">residual connection</td>
-<td align="left">残差连接</td>
+<tr class="even">
+<td style="text-align: left;">stacked</td>
+<td style="text-align: left;">堆叠的</td>
+<td style="text-align: left;">residual connection</td>
+<td style="text-align: left;">残差连接</td>
 </tr>
-<tr>
-<td align="left">parallel</td>
-<td align="left">并行</td>
-<td align="left">simultaneously</td>
-<td align="left">同时</td>
+<tr class="odd">
+<td style="text-align: left;">parallel</td>
+<td style="text-align: left;">并行</td>
+<td style="text-align: left;">simultaneously</td>
+<td style="text-align: left;">同时</td>
 </tr>
-<tr>
-<td align="left">additive attention</td>
-<td align="left">累积注意力</td>
-<td align="left">compatibility function</td>
-<td align="left">兼容函数</td>
+<tr class="even">
+<td style="text-align: left;">additive attention</td>
+<td style="text-align: left;">累积注意力</td>
+<td style="text-align: left;">compatibility function</td>
+<td style="text-align: left;">兼容函数</td>
 </tr>
-<tr>
-<td align="left">in magnitude</td>
-<td align="left">在规模上</td>
-<td align="left">concatenate</td>
-<td align="left">连接</td>
+<tr class="odd">
+<td style="text-align: left;">in magnitude</td>
+<td style="text-align: left;">在规模上</td>
+<td style="text-align: left;">concatenate</td>
+<td style="text-align: left;">连接</td>
 </tr>
-<tr>
-<td align="left">mimics</td>
-<td align="left">模仿</td>
-<td align="left">hypothesize</td>
-<td align="left">假定</td>
+<tr class="even">
+<td style="text-align: left;">mimics</td>
+<td style="text-align: left;">模仿</td>
+<td style="text-align: left;">hypothesize</td>
+<td style="text-align: left;">假定</td>
 </tr>
-<tr>
-<td align="left">extrapolate to</td>
-<td align="left">外推到</td>
-<td align="left">interpretable</td>
-<td align="left">可解释的</td>
+<tr class="odd">
+<td style="text-align: left;">extrapolate to</td>
+<td style="text-align: left;">外推到</td>
+<td style="text-align: left;">interpretable</td>
+<td style="text-align: left;">可解释的</td>
 </tr>
-<tr>
-<td align="left">training regime</td>
-<td align="left">训练机制</td>
-<td align="left"></td>
-<td align="left"></td>
+<tr class="even">
+<td style="text-align: left;">training regime</td>
+<td style="text-align: left;">训练机制</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
-</tbody></table>
-<h3 id="用句"><a href="#用句" class="headerlink" title="用句"></a>用句</h3><blockquote>
+</tbody>
+</table>
+<h3 id="用句">用句</h3>
+<blockquote>
 <ul>
-<li>left and right halves of Figure 1<blockquote>
-<p>图一的左右半部分</p>
-</blockquote>
-</li>
-<li>as depicted in Figure 2.<blockquote>
-<p>如图二所示</p>
-</blockquote>
-</li>
+<li>left and right halves of Figure 1 &gt; 图一的左右半部分</li>
+<li>as depicted in Figure 2. &gt; 如图二所示</li>
 </ul>
 </blockquote>
-<h2 id="复现-amp-运用技巧"><a href="#复现-amp-运用技巧" class="headerlink" title="复现 &amp; 运用技巧"></a>复现 &amp; 运用技巧</h2><p>暂待</p>
+<h2 id="复现-运用技巧">复现 &amp; 运用技巧</h2>
+<p>暂待</p>
 
                 
             </div>
@@ -1292,7 +1285,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.9k</span>&nbsp;字
+                class="white-color">9.5k</span>&nbsp;字
             
             
             
