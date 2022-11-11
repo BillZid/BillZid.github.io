@@ -403,14 +403,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-26
+                    2022-11-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    862
+                    850
                 </div>
                 
 
@@ -442,27 +442,68 @@
 提出，有助于总结信息，构建认知模型。</p>
 <blockquote>
 <ol type="1">
-<li>论文试图解决什么问题？ &gt;
-在机器翻译、句法分析等nlp任务上取得好成绩，进行更准确的序列转化（编-解码）。出发点在于基于CNN、RNN的模型在长距离依赖下的限制，更好的进行并行计算。</li>
-<li>这是否是一个新的问题？ &gt; 不是新问题，但是是一个全新的思路。</li>
-<li>这篇文章要验证一个什么科学假设？ &gt;
-在序列到序列学习中，用（多头）自注意力机制替代循环层、卷积层，可以取得很好的结果。</li>
-<li>有哪些相关研究？如何归类？谁是这一课题在领域内值得关注的研究员？
-&gt; 暂略</li>
-<li>论文中提到的解决方案之关键是什么？ &gt;
-用（多头）自注意力机制完全替代循环层和卷积层、位置编码、适当位置加入前馈神经网络、注意力机制的多层灵活运用。</li>
-<li>论文中的实验是如何设计的？ &gt;
-在公开数据集上训练，和其他模型作比较，并控制变量评估了模型中各个部分所带来的精度影响。</li>
-<li>用于定量评估的数据集是什么？代码有没有开源？ &gt; WMT 2014
-English-German dataset，WMT 2014 English-French dataset，Wall Street
-Journal (WSJ) portion of the Penn Treebank（宾州树库），已经在 <a target="_blank" rel="noopener" href="https://github.com/tensorflow/tensor2tensor" class="uri">https://github.com/tensorflow/tensor2tensor</a>
-上开源模型。</li>
-<li>论文中的实验及结果有没有很好地支持需要验证的科学假设？ &gt;
-实验结果相当乐观，在机器翻译和句法分析等nlp任务上取得了截止论文发表时最高的评分。</li>
-<li>这篇论文到底有什么贡献？ &gt; 提出了一套革命式的nlp研究框架。</li>
-<li>下一步呢？有什么工作可以继续深入？ &gt;
-扩展到其他领域（音视频图像，以及其他类型的序列到序列学习领域），模型变种（基本被卷王们做完了）。</li>
+<li>论文试图解决什么问题？</li>
 </ol>
+<blockquote>
+<p>在机器翻译、句法分析等nlp任务上取得好成绩，进行更准确的序列转化（编-解码）。出发点在于基于CNN、RNN的模型在长距离依赖下的限制，更好的进行并行计算。</p>
+</blockquote>
+<ol start="2" type="1">
+<li>这是否是一个新的问题？</li>
+</ol>
+<blockquote>
+<p>不是新问题，但是是一个全新的思路。</p>
+</blockquote>
+<ol start="3" type="1">
+<li>这篇文章要验证一个什么科学假设？</li>
+</ol>
+<blockquote>
+<p>在序列到序列学习中，用（多头）自注意力机制替代循环层、卷积层，可以取得很好的结果。</p>
+</blockquote>
+<ol start="4" type="1">
+<li>有哪些相关研究？如何归类？谁是这一课题在领域内值得关注的研究员？</li>
+</ol>
+<blockquote>
+<p>暂略</p>
+</blockquote>
+<ol start="5" type="1">
+<li>论文中提到的解决方案之关键是什么？</li>
+</ol>
+<blockquote>
+<p>用（多头）自注意力机制完全替代循环层和卷积层、位置编码、适当位置加入前馈神经网络、注意力机制的多层灵活运用。</p>
+</blockquote>
+<ol start="6" type="1">
+<li>论文中的实验是如何设计的？</li>
+</ol>
+<blockquote>
+<p>在公开数据集上训练，和其他模型作比较，并控制变量评估了模型中各个部分所带来的精度影响。</p>
+</blockquote>
+<ol start="7" type="1">
+<li>用于定量评估的数据集是什么？代码有没有开源？</li>
+</ol>
+<blockquote>
+<p>WMT 2014 English-German dataset，WMT 2014 English-French
+dataset，Wall Street Journal (WSJ) portion of the Penn
+Treebank（宾州树库），已经在 <a target="_blank" rel="noopener" href="https://github.com/tensorflow/tensor2tensor" class="uri">https://github.com/tensorflow/tensor2tensor</a>
+上开源模型。</p>
+</blockquote>
+<ol start="8" type="1">
+<li>论文中的实验及结果有没有很好地支持需要验证的科学假设？</li>
+</ol>
+<blockquote>
+<p>实验结果相当乐观，在机器翻译和句法分析等nlp任务上取得了截止论文发表时最高的评分。</p>
+</blockquote>
+<ol start="9" type="1">
+<li>这篇论文到底有什么贡献？</li>
+</ol>
+<blockquote>
+<p>提出了一套革命式的nlp研究框架。</p>
+</blockquote>
+<ol start="10" type="1">
+<li>下一步呢？有什么工作可以继续深入？</li>
+</ol>
+<blockquote>
+<p>扩展到其他领域（音视频图像，以及其他类型的序列到序列学习领域），模型变种（基本被卷王们做完了）。</p>
+</blockquote>
 </blockquote>
 <p>还可以点击这里参考<a target="_blank" rel="noopener" href="https://readpaper.com/paper/2963403868/questions-detail?questionId=534901540122656768">公开回答</a></p>
 <h2 id="思维导图">思维导图</h2>
@@ -588,9 +629,17 @@ embeddings做和，是否不妥，实际含义为何？（词本身的含义与�
 <h3 id="用句">用句</h3>
 <blockquote>
 <ul>
-<li>left and right halves of Figure 1 &gt; 图一的左右半部分</li>
-<li>as depicted in Figure 2. &gt; 如图二所示</li>
+<li>left and right halves of Figure 1</li>
 </ul>
+<blockquote>
+<p>图一的左右半部分</p>
+</blockquote>
+<ul>
+<li>as depicted in Figure 2.</li>
+</ul>
+<blockquote>
+<p>如图二所示</p>
+</blockquote>
 </blockquote>
 <h2 id="复现-运用技巧">复现 &amp; 运用技巧</h2>
 <p>暂待</p>
@@ -1285,7 +1334,7 @@ embeddings做和，是否不妥，实际含义为何？（词本身的含义与�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.8k</span>&nbsp;字
+                class="white-color">12.3k</span>&nbsp;字
             
             
             
