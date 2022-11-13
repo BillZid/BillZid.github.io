@@ -387,7 +387,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-26
+                    2022-11-13
                 </div>
                 
 
@@ -419,8 +419,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol type="1">
-<li><p>求数组某行某列的最大值(最小值) </p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+                <ol>
+<li><p>求数组某行某列的最大值(最小值)</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
 a <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
               <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -431,8 +432,9 @@ a <span class="token operator">=</span> np<span class="token punctuation">.</spa
 <span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>amax<span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一行的最大值组成列表</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-output" data-language="output"><code class="language-output">5
 [2 5]
-[5 3]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p></p></li>
-<li><p>矩阵点积与向量外积 </p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+[5 3]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li><p>矩阵点积与向量外积</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
 a <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
               <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -442,11 +444,14 @@ c <span class="token operator">=</span> np<span class="token punctuation">.</spa
 d <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 就是数学上的矩阵乘法</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>outer<span class="token punctuation">(</span>c<span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token triple-quoted-string string">'''向量外积,也就是m维向量和n维向量之间,
-做(m,1)和(1,n)到(m,n)的矩阵乘法,有效解决numpy中(k,)维向量的歧义'''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre> <pre class="line-numbers language-output" data-language="output"><code class="language-output">[[15 20]
+做(m,1)和(1,n)到(m,n)的矩阵乘法,有效解决numpy中(k,)维向量的歧义'''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-output" data-language="output"><code class="language-output">[[15 20]
  [11 16]]
 [[ 6 15]
- [ 8 20]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p></p></li>
-<li><p>矩阵(多维数组)求和 </p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+ [ 8 20]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>矩阵(多维数组)求和</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
 a <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
               <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -454,9 +459,10 @@ a <span class="token operator">=</span> np<span class="token punctuation">.</spa
 <span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一列的和</span>
 <span class="token triple-quoted-string string">'''对a=a[n0][n1],axis=0时,对应n0已经确定下来,即n0取值定为0,1,遍历n0.
 所以此时的sum就是固定n1,sum[n1] = a[0][n1]+a[1][n1],表现为按列求和'''</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一行的和</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre> <pre class="line-numbers language-output" data-language="output"><code class="language-output">10
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 求每一行的和</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-output" data-language="output"><code class="language-output">10
 [2 8]
-[5 5]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p></p></li>
+[5 5]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 
                 
@@ -930,7 +936,7 @@ a <span class="token operator">=</span> np<span class="token punctuation">.</spa
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            国科大一年级复杂系统与复杂网络课程笔记
+                            复杂系统与复杂网络课程笔记
                         
                     </div>
                     <div class="publish-info">
@@ -1137,7 +1143,7 @@ a <span class="token operator">=</span> np<span class="token punctuation">.</spa
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12.3k</span>&nbsp;字
+                class="white-color">15.6k</span>&nbsp;字
             
             
             
