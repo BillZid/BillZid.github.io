@@ -414,7 +414,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3k
+                    2.9k
                 </div>
                 
 
@@ -504,7 +504,8 @@
 </blockquote>
 </blockquote>
 <p>还可以点击这里参考<a target="_blank" rel="noopener" href="https://readpaper.com/paper/2963403868/questions-detail?questionId=534901540122656768">公开回答</a></p>
-<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><img src="/attention-is-all-you-need/Transformer.png" alt="思维导图"></p>
+<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><a href="Transformer.xmind">思维导图下载链接</a></p>
+<p><img src="/attention-is-all-you-need/Transformer.png" alt="思维导图"></p>
 <table>
 <thead>
 <tr>
@@ -527,7 +528,7 @@
 <td><center>参数影响测试</center></td>
 </tr>
 </tbody></table>
-<h2 id="资料参考"><a href="#资料参考" class="headerlink" title="资料参考"></a>资料参考</h2><h3 id="深入理解Self-Attention"><a href="#深入理解Self-Attention" class="headerlink" title="深入理解Self-Attention"></a>深入理解Self-Attention</h3><p><a href="attention.pdf">注意力机制参考资料</a></p>
+<h2 id="资料参考"><a href="#资料参考" class="headerlink" title="资料参考"></a>资料参考</h2><h3 id="深入理解Self-Attention"><a href="#深入理解Self-Attention" class="headerlink" title="深入理解Self-Attention"></a>深入理解Self-Attention</h3><p><a href="attention.pdf">注意力机制(截取自《神经网络与深度学习》邱锡鹏)</a></p>
 <p>向量的内积，其几何意义是什么？</p>
 <p><strong>答：表征两个向量的夹角，表征一个向量在另一个向量上的投影</strong></p>
 <blockquote>
@@ -588,22 +589,22 @@
 <p>总结一下就是 $Softmax(A)$ 的分布会和 $d$ 有关。因此 $A$ 中每一个元素除以$\sqrt{d_k}$ 后，方差又变为 1。这使得 $Softmax(A)$ 的分布 “陡峭” 程度与 $d$ 解耦，从而使得训练过程中梯度值保持稳定。</p>
 <hr>
 <p>最后再补充一点，<strong>对 self-attention 来说，它跟每一个 input vector 都做 attention，所以没有考虑到 input sequence 的顺序</strong>。更通俗来讲，大家可以发现我们前文的计算每一个词向量都与其他词向量计算内积，得到的结果丢失了我们原来文本的顺序信息。对比来说，LSTM 是对于文本顺序信息的解释是输出词向量的先后顺序，而我们上文的计算对 sequence 的顺序这一部分则完全没有提及，你打乱词向量的顺序，得到的结果仍然是相同的。</p>
-<p>这就牵扯到 Transformer 的位置编码了，我们按住不表。</p>
+<p>这就牵扯到 Transformer 的位置编码了。</p>
 <blockquote>
 <p>To this end, we add “positional encodings” to the input embeddings at the bottoms of the encoder and decoder stacks. The positional encodings have the same dimension d-model as the embeddings, so that the two can be summed. </p>
 </blockquote>
-<h3 id="Transformer里的Mask机制"><a href="#Transformer里的Mask机制" class="headerlink" title="Transformer里的Mask机制"></a>Transformer里的Mask机制</h3><p><strong>1.padding mask</strong></p>
-<p><strong>在 encoder 和 decoder 两个模块里都有 padding mask</strong>，位置是在softmax之前，<strong>为什么</strong>要使用 padding mask，是<strong>因为由于 encoder 和 decoder 两个模块都会有各自相应的输入，但是输入的句子长度是不一样的，计算 attention score 会出现偏差</strong>，为了<strong>保证句子的长度一样所以需要进行填充</strong>，<strong>但是</strong>用 0 填充的位置的信息是完全没有意义的（多余的），经过 softmax 操作<strong>也会有对应的输出，会影响全局概率值</strong>，因此我们<strong>希望这个位置不参与后期的反向传播过程</strong>。以此避免最后影响模型自身的效果，既在<strong>训练时将补全的位置给 Mask 掉</strong>，也就是在这些位置上补一些无穷小（负无穷）的值，经过 softmax 操作，这些值就成了 0，就不在影响全局概率的预测。</p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/353365423">pytorch nn.Transformer 的 mask 理解 - 知乎 (zhihu.com)</a><strong>padding mask 讲得比较细</strong></p>
+<h3 id="Transformer里的Mask机制"><a href="#Transformer里的Mask机制" class="headerlink" title="Transformer里的Mask机制"></a>Transformer里的Mask机制</h3><p>1.padding mask</p>
+<p>在 encoder 和 decoder 两个模块里都有 padding mask，位置是在softmax之前，<strong>为什么</strong>要使用 padding mask，是<strong>因为由于 encoder 和 decoder 两个模块都会有各自相应的输入，但是输入的句子长度是不一样的，计算 attention score 会出现偏差</strong>，为了<strong>保证句子的长度一样所以需要进行填充</strong>，<strong>但是</strong>用 0 填充的位置的信息是完全没有意义的（多余的），经过 softmax 操作<strong>也会有对应的输出，会影响全局概率值</strong>，因此我们<strong>希望这个位置不参与后期的反向传播过程</strong>。以此避免最后影响模型自身的效果，既在<strong>训练时将补全的位置给 Mask 掉</strong>，也就是在这些位置上补一些无穷小（负无穷）的值，经过 softmax 操作，这些值就成了 0，就不在影响全局概率的预测。</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/353365423">pytorch nn.Transformer 的 mask 理解 - 知乎 (zhihu.com)</a>padding mask 讲得比较细</p>
 <hr>
-<p><strong>2.Sequence MASK</strong></p>
+<p>2.Sequence MASK</p>
 <p><strong>sequence MASK 是只存在 decoder 的第一个 mutil_head_self_attention 里</strong>，为什么这样做？是因为在测试验证阶段，模型并不知道当前时刻的输入和未来时刻的单词信息。也就是对于一个序列中的第 i 个 token 解码的时候只能够依靠 i 时刻之前 (包括 i) 的的输出，而不能依赖于 i 时刻之后的输出。因此我们要采取一个遮盖的方法 (Mask) 使得其在<strong>计算 self-attention 的时候只用 i 个时刻之前的 token 进行计算</strong>。</p>
 <p>举例：“我爱中国共产党”，假如要预测 “中” 这个词，那么当前时刻的输入就是 “我” 以及 “爱” 的输入的叠加，一部分来自 “ 我 “的信息输出，一部分来自” 爱”的信息输出，如果没有 mask 将后面的单词信息遮住，那么后面的单词对要预测的这个字 “中” 也会有相应的信息贡献，在训练的时候整个句子的前后字词的位置是已知的，所以不遮挡模型也是可以运行的，因为本身模型输入时就已经知道了句子的整个信息（也就是 ground truth embeding）。 但是在进行模型预测（测试新的输入句子）时，输入的句子是未知的，随机的，模型不知道句子的信息，只能通过上一层的输出和原始的输入知道要预测字的前一个信息，进而依次预测后面的字的信息。这就造成了在训练时模型多训练了 “中” 后面的词，增加了训练时间，消耗了本没必要的空间及时间。在一开始训练时就 mask 掉，节省时间的同时也降低了过拟合的风险，提高了模型泛化能力。<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/368592551" title="浅析Transformer训练时并行问题 - 知乎 (zhihu.com)">浅析 Transformer 训练时并行问题 - 知乎 (zhihu.com)</a><strong>Sequence mask 讲得比较细</strong></p>
 <hr>
  <img src="./1ae1c2a03b12b6b481151e7bad0d2332.png" style="zoom: 50%;">
 
 <hr>
-<p>**3.【Pytorch】Transformer 中的 mask ——<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/435782555">转载自链接</a> **</p>
+<p>3.【Pytorch】Transformer 中的 mask ——<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/435782555">转载自链接</a></p>
 <ul>
 <li>由于 Transformer 的模型结构，在应用 Transformer 的时候需要添加 mask 来实现一些功能。<ul>
 <li>如 Encdoer 中需要输入定长序列而 padding，可以加入 mask 剔除 padding 部分</li>
@@ -612,12 +613,6 @@
 </li>
 <li>在一些更灵活的应用中，有时候需要设计一些 mask 形式来调整可利用信息源的范围。因此，本文以官网 Transformer 做文本翻译为例 <a href="https://link.zhihu.com/?target=https://pytorch.org/tutorials/beginner/translation_transformer.html">官网翻译示例</a>，梳理一下 Pytorch 实现的 Transformer 是如何做 mask 操作的。<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35169059/article/details/101678207">(164 条消息) Transformer 的矩阵维度分析和 Mask 详解_我最怜君中宵舞的博客 - CSDN 博客_transformer 中的 mask// 讲清楚了训练可以并行，推理和测试的时候不能并行的原因</a></li>
 </ul>
-<hr>
-<p><strong>简单层面讲了 TransformerDecoder 进行并行</strong></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/LZS12321LZS/article/details/121220388?spm=1001.2101.3001.6650.5&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5-121220388-blog-115442974.pc_relevant_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5-121220388-blog-115442974.pc_relevant_default&amp;utm_relevant_index=10">Transformer decoder 中 masked attention 的理解_寺里 LZS 的博客 - CSDN 博客</a></p>
-<p>这个视频与这篇博客配套使用，讲的很清楚了</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av255578234">全网最详细 Transformer 中的 mask 操作及代码详解【推荐】【系列 10-4-2】_哔哩哔哩_bilibili</a></p>
-<p><a target="_blank" rel="noopener" href="https://fanrenyi.com/blog/469">transformer 中的 mask 操作 - 范仁义 - 读书编程笔记 (fanrenyi.com)</a></p>
 <hr>
 <h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ol>
 <li>自注意力机制(Q,K,V结构)本质是向量信息的交叉（交互）？是否流于形式，可以简化吗？可以拓展吗？<br> $ Q K^T = X W_q W_k^T X^T $, 其中 $ X = [X_1;X_2;…X_n] $…</li>
@@ -1401,7 +1396,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.1k</span>&nbsp;字
+                class="white-color">18k</span>&nbsp;字
             
             
             
