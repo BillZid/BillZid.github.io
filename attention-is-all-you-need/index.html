@@ -504,8 +504,16 @@
 </blockquote>
 </blockquote>
 <p>还可以点击这里参考<a target="_blank" rel="noopener" href="https://readpaper.com/paper/2963403868/questions-detail?questionId=534901540122656768">公开回答</a></p>
-<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><a href="Transformer.xmind">思维导图下载链接</a></p>
-<p><img src="/attention-is-all-you-need/Transformer.png" alt="思维导图"></p>
+<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><a href="%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.pdf">思维导图下载链接</a></p>
+
+
+	<div class="row">
+    <embed src="思维导图.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
 <table>
 <thead>
 <tr>
@@ -546,7 +554,7 @@
 </blockquote>
 <hr>
 <p>$softmax(XX^T)$的意义图解: </p>
-<img src="./v2-179fd393b3aac244ec338767ef5d8d3d_r.jpg" style="zoom:67%;">
+ <img src="./v2-179fd393b3aac244ec338767ef5d8d3d_r.jpg" style="zoom: 50%;">
 
 <hr>
 <p>我们回想 $Softmax$ 的公式，$Softmax$ 操作的意义是什么呢？</p>
@@ -555,7 +563,7 @@
 <p>note:  这里是对每一行做softmax归一化，归一化之后实际上得到了“早”，“上”，“好”三个字在“早”字上的投影长度的比例关系</p>
 </blockquote>
 <hr>
-<img src="./v2-71069dfdaf4758a037bdddc56d2a5fc5_r.jpg" style="zoom:67%;">
+ <img src="./v2-71069dfdaf4758a037bdddc56d2a5fc5_r.jpg" style="zoom: 50%;">
 
 <hr>
 <p>在新的向量中，每一个维度的数值都是由三个词向量在这一维度的数值加权求和得来的</p>
@@ -568,16 +576,17 @@
 <p>note:  还得看词向量的意义所在，词向量内积，夹角等等的含义</p>
 </blockquote>
 <hr>
-<img src="./v2-f85c81cbb259b80c3644a16e005679be_r.jpg" style="zoom:67%;">
+ <img src="./v2-f85c81cbb259b80c3644a16e005679be_r.jpg" style="zoom: 50%;">
 
 <hr>
-<img src="./v2-55d08f662a489739c3220486de095e12_r.jpg" style="zoom:67%;">
+ <img src="./v2-55d08f662a489739c3220486de095e12_r.jpg" style="zoom: 50%;">
 
 <blockquote>
 <p>note:  做的假设是X是行向量代表词语，右乘一个矩阵才能体现出对行向量做线性变换</p>
 </blockquote>
 <hr>
-<p><img src="/attention-is-all-you-need/v2-da928d89f18a138c259cc42b7cc582cd_r.jpg"></p>
+ <img src="./v2-da928d89f18a138c259cc42b7cc582cd_r.jpg" style="zoom: 67%;">
+
 <hr>
 <p>其实，许多文章中所谓的<code>Q</code> <code>K</code> <code>V</code>矩阵、查询向量之类的字眼，其来源是 $X$ 与矩阵的乘积，<strong>本质上都是</strong> $X$ <strong>的线性变换</strong>。</p>
 <hr>
@@ -618,16 +627,8 @@
 <li>自注意力机制(Q,K,V结构)本质是向量信息的交叉（交互）？是否流于形式，可以简化吗？可以拓展吗？<br> $ Q K^T = X W_q W_k^T X^T $, 其中 $ X = [X_1;X_2;…X_n] $…</li>
 <li>positional encodings直接和word embeddings做和，是否不妥，实际含义为何？（词本身的含义与位置相关？如果用依存句法分析树来编码？），用向量拼接的方式怎么样（存在维数控制问题？）</li>
 </ol>
-<h2 id="原文-amp-个人标注"><a href="#原文-amp-个人标注" class="headerlink" title="原文 &amp; 个人标注"></a>原文 &amp; 个人标注</h2><p><a href="1.pdf">PDF下载链接</a></p>
-
-
-	<div class="row">
-    <embed src="1.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
+<h2 id="原文-amp-个人标注"><a href="#原文-amp-个人标注" class="headerlink" title="原文 &amp; 个人标注"></a>原文 &amp; 个人标注</h2><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1706.03762">原文链接</a></p>
+<p><a href="1.pdf">个人批注</a></p>
 <h2 id="外文写作"><a href="#外文写作" class="headerlink" title="外文写作"></a>外文写作</h2><h3 id="用词"><a href="#用词" class="headerlink" title="用词"></a>用词</h3><table>
 <thead>
 <tr>
