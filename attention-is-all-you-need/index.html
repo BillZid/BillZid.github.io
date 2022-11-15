@@ -407,21 +407,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-13
+                    2022-11-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    873
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    10 分
                 </div>
                 
 
@@ -504,17 +504,7 @@
 </blockquote>
 </blockquote>
 <p>还可以点击这里参考<a target="_blank" rel="noopener" href="https://readpaper.com/paper/2963403868/questions-detail?questionId=534901540122656768">公开回答</a></p>
-<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p>待绘制添加</p>
-<table>
-<thead>
-<tr>
-<th><img src="tianyi.jpg" width="30%"></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><center>可爱小天依镇楼</center></td>
-</tr>
-</tbody></table>
+<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><img src="/attention-is-all-you-need/Transformer.png" alt="思维导图"></p>
 <table>
 <thead>
 <tr>
@@ -537,7 +527,98 @@
 <td><center>参数影响测试</center></td>
 </tr>
 </tbody></table>
-<h2 id="文章共读"><a href="#文章共读" class="headerlink" title="文章共读"></a>文章共读</h2><p><a href="attention.pdf">注意力机制参考资料</a><br>暂待补充</p>
+<h2 id="资料参考"><a href="#资料参考" class="headerlink" title="资料参考"></a>资料参考</h2><h3 id="深入理解Self-Attention"><a href="#深入理解Self-Attention" class="headerlink" title="深入理解Self-Attention"></a>深入理解Self-Attention</h3><p><a href="attention.pdf">注意力机制参考资料</a></p>
+<p>向量的内积，其几何意义是什么？</p>
+<p><strong>答：表征两个向量的夹角，表征一个向量在另一个向量上的投影</strong></p>
+<blockquote>
+<p>note:  但是还有两个向量的模长也影响了内积</p>
+<p>进一步的，词向量的模长代表什么？</p>
+</blockquote>
+<hr>
+<p>投影的值大有什么意思？投影的值小又如何？</p>
+<p><strong>投影的值大，说明两个向量相关度高</strong>。</p>
+<p><strong>我们考虑，如果两个向量夹角是九十度，那么这两个向量线性无关，完全没有相关性！</strong></p>
+<hr>
+<p>我们假设 $X = [x_1^T;x_2^T;x_3^T]$，其中 $X$ 为一个二维矩阵， $x_i^T$为一个行向量（其实很多教材都默认向量是列向量，为了方便举例请读者理解笔者使用行向量）</p>
+<blockquote>
+<p>note:  如果 $X$ 写为 $X = [x_1,x_2,x_3]$, 其中$x_i$都是列向量的形式, 那么公式就变为$\boldsymbol{H}=\boldsymbol{V}\operatorname{softmax}\left(\frac{\boldsymbol{K}^{\top}\boldsymbol{Q}}{\sqrt{D_k}}\right) $ 的形式, 且其中Q,K,V都变为 $WX$ 的形式, 但相应的也不会影响本文分析</p>
+</blockquote>
+<hr>
+<p>$softmax(XX^T)$的意义图解: </p>
+<img src="./v2-179fd393b3aac244ec338767ef5d8d3d_r.jpg" style="zoom:67%;">
+
+<hr>
+<p>我们回想 $Softmax$ 的公式，$Softmax$ 操作的意义是什么呢？</p>
+<p><strong>答：归一化</strong></p>
+<blockquote>
+<p>note:  这里是对每一行做softmax归一化，归一化之后实际上得到了“早”，“上”，“好”三个字在“早”字上的投影长度的比例关系</p>
+</blockquote>
+<hr>
+<img src="./v2-71069dfdaf4758a037bdddc56d2a5fc5_r.jpg" style="zoom:67%;">
+
+<hr>
+<p>在新的向量中，每一个维度的数值都是由三个词向量在这一维度的数值加权求和得来的</p>
+<blockquote>
+<p>note:  上述的比例关系再乘回原向量“早”，“上”，“好”再求和得到了什么？看不到几何意义，但能一定程度上反应相关性，或者说包含下了整个语句的信息。</p>
+</blockquote>
+<hr>
+<p>一张更形象的图是这样的，图中右半部分的颜色深浅，其实就是我们上图中黄色向量中数值的大小，意义就是单词之间的相关度（<strong>回想之前的内容，相关度其本质是由向量的内积度量的</strong>）</p>
+<blockquote>
+<p>note:  还得看词向量的意义所在，词向量内积，夹角等等的含义</p>
+</blockquote>
+<hr>
+<img src="./v2-f85c81cbb259b80c3644a16e005679be_r.jpg" style="zoom:67%;">
+
+<hr>
+<img src="./v2-55d08f662a489739c3220486de095e12_r.jpg" style="zoom:67%;">
+
+<blockquote>
+<p>note:  做的假设是X是行向量代表词语，右乘一个矩阵才能体现出对行向量做线性变换</p>
+</blockquote>
+<hr>
+<p><img src="/attention-is-all-you-need/v2-da928d89f18a138c259cc42b7cc582cd_r.jpg"></p>
+<hr>
+<p>其实，许多文章中所谓的<code>Q</code> <code>K</code> <code>V</code>矩阵、查询向量之类的字眼，其来源是 $X$ 与矩阵的乘积，<strong>本质上都是</strong> $X$ <strong>的线性变换</strong>。</p>
+<hr>
+<p>为什么不直接使用 $X$ 而要对其进行线性变换？</p>
+<p>当然是为了提升模型的拟合能力，矩阵 $W$ 都是可以训练的，起到一个缓冲的效果。</p>
+<hr>
+<p>假设 $Q,K$ 里的元素的均值为 0，方差为 1，那么 $A=QK^T$ 中元素的均值为 0，方差为 $d$. 当 $d$ 变得很大时， $A$ 中的元素的方差也会变得很大，如果 $A$ 中的元素方差很大，那么 $Softmax(A)$ 的分布会趋于陡峭 (分布的方差大，分布集中在绝对值大的区域)。</p>
+<hr>
+<p>总结一下就是 $Softmax(A)$ 的分布会和 $d$ 有关。因此 $A$ 中每一个元素除以$\sqrt{d_k}$ 后，方差又变为 1。这使得 $Softmax(A)$ 的分布 “陡峭” 程度与 $d$ 解耦，从而使得训练过程中梯度值保持稳定。</p>
+<hr>
+<p>最后再补充一点，<strong>对 self-attention 来说，它跟每一个 input vector 都做 attention，所以没有考虑到 input sequence 的顺序</strong>。更通俗来讲，大家可以发现我们前文的计算每一个词向量都与其他词向量计算内积，得到的结果丢失了我们原来文本的顺序信息。对比来说，LSTM 是对于文本顺序信息的解释是输出词向量的先后顺序，而我们上文的计算对 sequence 的顺序这一部分则完全没有提及，你打乱词向量的顺序，得到的结果仍然是相同的。</p>
+<p>这就牵扯到 Transformer 的位置编码了，我们按住不表。</p>
+<blockquote>
+<p>To this end, we add “positional encodings” to the input embeddings at the bottoms of the encoder and decoder stacks. The positional encodings have the same dimension d-model as the embeddings, so that the two can be summed. </p>
+</blockquote>
+<h3 id="Transformer里的Mask机制"><a href="#Transformer里的Mask机制" class="headerlink" title="Transformer里的Mask机制"></a>Transformer里的Mask机制</h3><p><strong>1.padding mask</strong></p>
+<p><strong>在 encoder 和 decoder 两个模块里都有 padding mask</strong>，位置是在softmax之前，<strong>为什么</strong>要使用 padding mask，是<strong>因为由于 encoder 和 decoder 两个模块都会有各自相应的输入，但是输入的句子长度是不一样的，计算 attention score 会出现偏差</strong>，为了<strong>保证句子的长度一样所以需要进行填充</strong>，<strong>但是</strong>用 0 填充的位置的信息是完全没有意义的（多余的），经过 softmax 操作<strong>也会有对应的输出，会影响全局概率值</strong>，因此我们<strong>希望这个位置不参与后期的反向传播过程</strong>。以此避免最后影响模型自身的效果，既在<strong>训练时将补全的位置给 Mask 掉</strong>，也就是在这些位置上补一些无穷小（负无穷）的值，经过 softmax 操作，这些值就成了 0，就不在影响全局概率的预测。</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/353365423">pytorch nn.Transformer 的 mask 理解 - 知乎 (zhihu.com)</a><strong>padding mask 讲得比较细</strong></p>
+<hr>
+<p><strong>2.Sequence MASK</strong></p>
+<p><strong>sequence MASK 是只存在 decoder 的第一个 mutil_head_self_attention 里</strong>，为什么这样做？是因为在测试验证阶段，模型并不知道当前时刻的输入和未来时刻的单词信息。也就是对于一个序列中的第 i 个 token 解码的时候只能够依靠 i 时刻之前 (包括 i) 的的输出，而不能依赖于 i 时刻之后的输出。因此我们要采取一个遮盖的方法 (Mask) 使得其在<strong>计算 self-attention 的时候只用 i 个时刻之前的 token 进行计算</strong>。</p>
+<p>举例：“我爱中国共产党”，假如要预测 “中” 这个词，那么当前时刻的输入就是 “我” 以及 “爱” 的输入的叠加，一部分来自 “ 我 “的信息输出，一部分来自” 爱”的信息输出，如果没有 mask 将后面的单词信息遮住，那么后面的单词对要预测的这个字 “中” 也会有相应的信息贡献，在训练的时候整个句子的前后字词的位置是已知的，所以不遮挡模型也是可以运行的，因为本身模型输入时就已经知道了句子的整个信息（也就是 ground truth embeding）。 但是在进行模型预测（测试新的输入句子）时，输入的句子是未知的，随机的，模型不知道句子的信息，只能通过上一层的输出和原始的输入知道要预测字的前一个信息，进而依次预测后面的字的信息。这就造成了在训练时模型多训练了 “中” 后面的词，增加了训练时间，消耗了本没必要的空间及时间。在一开始训练时就 mask 掉，节省时间的同时也降低了过拟合的风险，提高了模型泛化能力。<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/368592551" title="浅析Transformer训练时并行问题 - 知乎 (zhihu.com)">浅析 Transformer 训练时并行问题 - 知乎 (zhihu.com)</a><strong>Sequence mask 讲得比较细</strong></p>
+<hr>
+ <img src="./1ae1c2a03b12b6b481151e7bad0d2332.png" style="zoom: 50%;">
+
+<hr>
+<p>**3.【Pytorch】Transformer 中的 mask ——<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/435782555">转载自链接</a> **</p>
+<ul>
+<li>由于 Transformer 的模型结构，在应用 Transformer 的时候需要添加 mask 来实现一些功能。<ul>
+<li>如 Encdoer 中需要输入定长序列而 padding，可以加入 mask 剔除 padding 部分</li>
+<li>如 Decoder 中为了实现并行而输入完整序列，需要加上 mask 剔除不应感知到的部分序列</li>
+</ul>
+</li>
+<li>在一些更灵活的应用中，有时候需要设计一些 mask 形式来调整可利用信息源的范围。因此，本文以官网 Transformer 做文本翻译为例 <a href="https://link.zhihu.com/?target=https://pytorch.org/tutorials/beginner/translation_transformer.html">官网翻译示例</a>，梳理一下 Pytorch 实现的 Transformer 是如何做 mask 操作的。<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35169059/article/details/101678207">(164 条消息) Transformer 的矩阵维度分析和 Mask 详解_我最怜君中宵舞的博客 - CSDN 博客_transformer 中的 mask// 讲清楚了训练可以并行，推理和测试的时候不能并行的原因</a></li>
+</ul>
+<hr>
+<p><strong>简单层面讲了 TransformerDecoder 进行并行</strong></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/LZS12321LZS/article/details/121220388?spm=1001.2101.3001.6650.5&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5-121220388-blog-115442974.pc_relevant_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5-121220388-blog-115442974.pc_relevant_default&amp;utm_relevant_index=10">Transformer decoder 中 masked attention 的理解_寺里 LZS 的博客 - CSDN 博客</a></p>
+<p>这个视频与这篇博客配套使用，讲的很清楚了</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av255578234">全网最详细 Transformer 中的 mask 操作及代码详解【推荐】【系列 10-4-2】_哔哩哔哩_bilibili</a></p>
+<p><a target="_blank" rel="noopener" href="https://fanrenyi.com/blog/469">transformer 中的 mask 操作 - 范仁义 - 读书编程笔记 (fanrenyi.com)</a></p>
+<hr>
 <h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ol>
 <li>自注意力机制(Q,K,V结构)本质是向量信息的交叉（交互）？是否流于形式，可以简化吗？可以拓展吗？<br> $ Q K^T = X W_q W_k^T X^T $, 其中 $ X = [X_1;X_2;…X_n] $…</li>
 <li>positional encodings直接和word embeddings做和，是否不妥，实际含义为何？（词本身的含义与位置相关？如果用依存句法分析树来编码？），用向量拼接的方式怎么样（存在维数控制问题？）</li>
@@ -624,7 +705,7 @@
 <p>如图二所示</p>
 </blockquote>
 </blockquote>
-<h2 id="复现-amp-运用技巧"><a href="#复现-amp-运用技巧" class="headerlink" title="复现 &amp; 运用技巧"></a>复现 &amp; 运用技巧</h2><p>暂待</p>
+<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p>暂待补充</p>
 
                 
             </div>
@@ -1320,7 +1401,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.7k</span>&nbsp;字
+                class="white-color">18.1k</span>&nbsp;字
             
             
             

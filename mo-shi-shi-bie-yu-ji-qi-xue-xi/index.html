@@ -387,14 +387,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-11-13
+                    2022-11-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    77
+                    310
                 </div>
                 
 
@@ -419,11 +419,38 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
+                <h2 id="贝叶斯推断"><a href="#贝叶斯推断" class="headerlink" title="贝叶斯推断"></a>贝叶斯推断</h2><ul>
 <li>贝叶斯 诊断推断</li>
 <li>贝叶斯没有真正建模因果，建模的是相关</li>
 <li>可解释性和稳定性</li>
 <li>狗在草地上，结果分类狗建模成了草地</li>
+</ul>
+<h2 id="无监督学习-降维"><a href="#无监督学习-降维" class="headerlink" title="无监督学习-降维"></a>无监督学习-降维</h2><ul>
+<li><p>维数灾难：随着空间维度的增长，数据点越来越分散，以至于距离和密度的概念越来越模糊，没有一种距离函数或相似性函数能避免高维带来的问题<img src="/mo-shi-shi-bie-yu-ji-qi-xue-xi/image-20221114133916187.png"></p>
+</li>
+<li><p>算法用到距离时，就会受到影响</p>
+</li>
+<li><p>基本假设：维数可以被压缩，有些维数是无效的</p>
+</li>
+<li><p>方法：维度选择 维度抽取   即做映射</p>
+</li>
+<li><p>采样，Johnson-Lindestrauss (JL) embedding lemma</p>
+</li>
+<li><p>手工移除特征：冗余的，不相关的，质量差的特征</p>
+</li>
+<li><p>矩阵和矩阵乘法本质上是在做线性变换</p>
+</li>
+<li><p>矩阵分解是将一个矩阵分解为几个矩阵的乘法：高维矩阵的低秩近似</p>
+<p>方阵-特征分解（对角化），非方阵-奇异值分解（SVD)</p>
+<p><img src="/mo-shi-shi-bie-yu-ji-qi-xue-xi/%E7%89%B9%E5%BE%81%E5%80%BC%E7%9A%84%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89.png"></p>
+</li>
+<li><p>MDS算法：由距离矩阵构造一个低维空间</p>
+</li>
+<li><p>PCA降维 &amp; kerner PCA</p>
+</li>
+<li><p>流形学习</p>
+</li>
+<li></li>
 </ul>
 <h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ul>
 <li>因果+神经网络</li>
@@ -1104,7 +1131,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.7k</span>&nbsp;字
+                class="white-color">18.1k</span>&nbsp;字
             
             
             
