@@ -6,7 +6,7 @@
   <link href="https://billzid.github.io/atom.xml" rel="self"/>
   
   <link href="https://billzid.github.io/"/>
-  <updated>2022-11-17T13:56:31.777Z</updated>
+  <updated>2022-11-17T14:31:40.259Z</updated>
   <id>https://billzid.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python中的代码测试</title>
+    <link href="https://billzid.github.io/python-zhong-de-dai-ma-ce-shi/"/>
+    <id>https://billzid.github.io/python-zhong-de-dai-ma-ce-shi/</id>
+    <published>2022-11-17T14:26:14.000Z</published>
+    <updated>2022-11-17T14:31:40.259Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;学习如何使用Python模块&lt;code&gt;unittest&lt;/code&gt;中的工具来测试代码&lt;/p&gt;
+&lt;h2 id=&quot;对函数进行测试&quot;&gt;&lt;a href=&quot;#对函数进行测试&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="自学笔记" scheme="https://billzid.github.io/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Python" scheme="https://billzid.github.io/tags/Python/"/>
+    
+    <category term="代码测试" scheme="https://billzid.github.io/tags/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python中的类</title>
+    <link href="https://billzid.github.io/python-zhong-de-lei/"/>
+    <id>https://billzid.github.io/python-zhong-de-lei/</id>
+    <published>2022-11-17T14:24:41.000Z</published>
+    <updated>2022-11-17T14:32:30.595Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一起来感受&lt;code&gt;面向对象编程&lt;/code&gt;的魅力&lt;/p&gt;
+&lt;h2 id=&quot;创建和使用类&quot;&gt;&lt;a href=&quot;#创建和使用类&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="自学笔记" scheme="https://billzid.github.io/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Python" scheme="https://billzid.github.io/tags/Python/"/>
+    
+    <category term="类" scheme="https://billzid.github.io/tags/%E7%B1%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>模式识别与机器学习</title>

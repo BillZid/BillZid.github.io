@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="模式识别与机器学习, Bill Z的博客">
-    <meta name="description" content="模式识别与机器学习课程笔记">
+    <meta name="keywords" content="Python中的代码测试, Bill Z的博客">
+    <meta name="description" content="学习如何使用Python模块unittest中的工具来测试代码">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>模式识别与机器学习 | Bill Z的博客</title>
+    <title>Python中的代码测试 | Bill Z的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -326,12 +326,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">模式识别与机器学习</h1>
+                    <h1 class="description center-align post-title">Python中的代码测试</h1>
                 </div>
             </div>
         </div>
@@ -355,8 +355,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">机器学习</span>
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/">
+                                <span class="chip bg-color">代码测试</span>
                             </a>
                         
                     </div>
@@ -367,8 +371,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-category">
-                                课程笔记
+                            <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="post-category">
+                                自学笔记
                             </a>
                         
                     </div>
@@ -380,7 +384,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-13
+                    2022-11-17
                 </div>
                 
 
@@ -394,14 +398,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    310
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -419,42 +423,157 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="贝叶斯推断"><a href="#贝叶斯推断" class="headerlink" title="贝叶斯推断"></a>贝叶斯推断</h2><ul>
-<li>贝叶斯 诊断推断</li>
-<li>贝叶斯没有真正建模因果，建模的是相关</li>
-<li>可解释性和稳定性</li>
-<li>狗在草地上，结果分类狗建模成了草地</li>
+                <p>学习如何使用Python模块<code>unittest</code>中的工具来测试代码</p>
+<h2 id="对函数进行测试"><a href="#对函数进行测试" class="headerlink" title="对函数进行测试"></a>对函数进行测试</h2><ul>
+<li><p>Python标准库中的模块<code>unittest</code>提供了代码测试工具。<strong>单元测试</strong> 用于核实函数的某个方面没有问题；<strong>测试用例</strong> 是一组单元测试，这些单元测试一起核实函数在各种情形下的行为都符合要求。良好的测试用例考虑到了函数可能收到的各种输入，包含针对所有这些情形的测试。<strong>全覆盖式测试</strong> 用例包含一整套单元测试，涵盖了各种可能的函数使用方式。对于大型项目，要实现全覆盖可能很难。通常，最初只要针对代码的重要行为编写测试即可，等项目被广泛使用时再考虑全覆盖。</p>
+</li>
+<li><p>要为函数编写测试用例，可先导入模块<code>unittest</code>以及要测试的函数，再创建一个继承<code>unittest.TestCase</code>的类，并编写一系列方法对函数行为的不同方面进行测试。</p>
+<p><strong>test_name_function.py</strong></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> unittest  <span class="token comment"># 导入unittest库</span>
+<span class="token keyword">from</span> name_function <span class="token keyword">import</span> get_formatted_name  <span class="token comment"># 导入要测试的函数</span>
+
+<span class="token keyword">class</span> <span class="token class-name">NamesTestCase</span><span class="token punctuation">(</span>unittest<span class="token punctuation">.</span>TestCase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""测试name_function.py"""</span>
+    
+    <span class="token keyword">def</span> <span class="token function">test_first_last_name</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""能够正确地处理像Janis Joplin这样的姓名吗？"""</span>
+        formatted_name <span class="token operator">=</span> get_formatted_name<span class="token punctuation">(</span><span class="token string">'janis'</span><span class="token punctuation">,</span> <span class="token string">'joplin'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertEqual<span class="token punctuation">(</span>formatted_name<span class="token punctuation">,</span> <span class="token string">'Janis Joplin'</span><span class="token punctuation">)</span>
+        
+unittest<span class="token punctuation">.</span>main<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>第3行我们创建了一个名为<code>NamesTestCase</code>的类，用于包含一系列针对<code>get_formatted_name()</code>的单元测试。你可随便给这个类命名，但最好让它看起来与要测试的函数相关，并包含字样Test。这个类必须继承<code>unittest.TestCase</code>类，这样Python才知道如何运行你编写的测试。</p>
+<p>方法命名为<code>test_first_last_name()</code>，因为我们要核实的是只有名和姓的姓名能否被正确地格式化。</p>
+<blockquote>
+<p>我们运行__test_name_function.py__时，所有以<code>test</code>打头的方法都将自动运行。</p>
+</blockquote>
+</li>
+<li><p>第8行里我们使用了<code>unittest</code>类最有用的功能之一：一个 <strong>断言</strong> __方法__。断言方法用来核实得到的结果是否与期望的结果一致。在这里，我们知道<code>get_formatted_name()</code>应返回这样的姓名，即名和姓的首字母为大写，且它们之间有一个空格，因此我们期望formatted_name的值为Janis Joplin 。为检查是否确实如此，我们调用<code>unittest</code>的方法<code>assertEqual()</code>，并向它传递formatted_name和’Janis Joplin’。代码行<code>self.assertEqual(formatted_name, 'Janis Joplin')</code>的意思是说：“将formatted_name的值同字符串’Janis Joplin’ 进行比较，如果它们相等，就万事大吉，如果它们不相等，跟我说一声！”</p>
+</li>
+<li><p>代码行<code>unittest.main()</code>让Python运行这个文件中的测试。运行__test_name_function.py__时，得到的输出如下：</p>
+<pre class="line-numbers language-output" data-language="output"><code class="language-output">.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+OK<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>第1行的句点表明有一个测试通过了。接下来的一行指出Python运行了一个测试，消耗的时间不到0.001秒。最后的OK表明该测试用例中的所有单元测试都通过了。</p>
+</li>
+<li><p>而若测试不通过，会产生下面这样的输出：</p>
+<pre class="line-numbers language-output" data-language="output"><code class="language-output">E
+======================================================================
+ERROR: test_first_last_name (__main__.NamesTestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+File "test_name_function.py", line 8, in test_first_last_name
+formatted_name = get_formatted_name('janis', 'joplin')
+TypeError: get_formatted_name() missing 1 required positional argument: 'last'
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+FAILED (errors=1)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li><p>第1行输出只有一个字母E，它指出测试用例中有一个单元测试导致了错误。</p>
+</li>
+<li><p>接下来，我们看到<code>NamesTestCase</code>中的<code>test_first_last_name()</code>导致了错误。测试用例包含众多单元测试时，知道哪个测试未通过至关重要。</p>
+</li>
+<li><p>在第5行，我们看到了一个标准的<code>traceback</code>，它指出函数调用<code>get_formatted_name('janis', 'joplin')</code>有问题，因为它缺少一个必不可少的位置实参。</p>
+</li>
+<li><p>我们还看到运行了一个单元测试。</p>
+</li>
+<li><p>最后，还看到了一条消息，它指出整个测试用例都未通过，因为运行该测试用例时发生了___1个错误___。这条消息位于输出末尾，让你一眼就能看到——你可不希望为获悉有多少测试未通过而翻阅长长的输出。</p>
+</li>
 </ul>
-<h2 id="无监督学习-降维"><a href="#无监督学习-降维" class="headerlink" title="无监督学习-降维"></a>无监督学习-降维</h2><ul>
-<li><p>维数灾难：随着空间维度的增长，数据点越来越分散，以至于距离和密度的概念越来越模糊，没有一种距离函数或相似性函数能避免高维带来的问题<img src="/mo-shi-shi-bie-yu-ji-qi-xue-xi/image-20221114133916187.png"></p>
 </li>
-<li><p>算法用到距离时，就会受到影响</p>
-</li>
-<li><p>基本假设：维数可以被压缩，有些维数是无效的</p>
-</li>
-<li><p>方法：维度选择 维度抽取   即做映射</p>
-</li>
-<li><p>采样，Johnson-Lindestrauss (JL) embedding lemma</p>
-</li>
-<li><p>手工移除特征：冗余的，不相关的，质量差的特征</p>
-</li>
-<li><p>矩阵和矩阵乘法本质上是在做线性变换</p>
-</li>
-<li><p>矩阵分解是将一个矩阵分解为几个矩阵的乘法：高维矩阵的低秩近似</p>
-<p>方阵-特征分解（对角化），非方阵-奇异值分解（SVD)</p>
-<p><img src="/mo-shi-shi-bie-yu-ji-qi-xue-xi/%E7%89%B9%E5%BE%81%E5%80%BC%E7%9A%84%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89.png"></p>
-</li>
-<li><p>MDS算法：由距离矩阵构造一个低维空间</p>
-</li>
-<li><p>PCA降维 &amp; kerner PCA</p>
-</li>
-<li><p>流形学习</p>
-</li>
-<li></li>
 </ul>
-<h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ul>
-<li>因果+神经网络</li>
-<li>对偶问题:转换数据量与数据维度,可不可以综合</li>
+<h2 id="对类进行测试"><a href="#对类进行测试" class="headerlink" title="对类进行测试"></a>对类进行测试</h2><ul>
+<li><p>Python在<code>unittest.TestCase</code>类中提供了很多断言方法。前面说过，断言方法检查你认为应该满足的条件是否确实满足。如果该条件确实满足，你对程序行为的假设就得到了确认，你就可以确信其中没有错误。如果你认为应该满足的条件实际上并不满足，Python将引发异常。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> unittest
+<span class="token keyword">from</span> survey <span class="token keyword">import</span> AnonymousSurvey
+
+    <span class="token keyword">class</span> <span class="token class-name">TestAnonmyousSurvey</span><span class="token punctuation">(</span>unittest<span class="token punctuation">.</span>TestCase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""针对AnonymousSurvey类的测试"""</span>
+        
+        <span class="token keyword">def</span> <span class="token function">test_store_single_response</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token triple-quoted-string string">"""测试单个答案会被妥善地存储"""</span>
+            question <span class="token operator">=</span> <span class="token string">"What language did you first learn to speak?"</span>
+            my_survey <span class="token operator">=</span> AnonymousSurvey<span class="token punctuation">(</span>question<span class="token punctuation">)</span>
+            my_survey<span class="token punctuation">.</span>store_response<span class="token punctuation">(</span><span class="token string">'English'</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>assertIn<span class="token punctuation">(</span><span class="token string">'English'</span><span class="token punctuation">,</span> my_survey<span class="token punctuation">.</span>responses<span class="token punctuation">)</span>
+            
+unittest<span class="token punctuation">.</span>main<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+</li>
+<li><p><code>unittest Module</code>中的断言方法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>assertEqual(a, b)</td>
+<td>核实a == b</td>
+</tr>
+<tr>
+<td>assertNotEqual(a, b)</td>
+<td>核实a != b</td>
+</tr>
+<tr>
+<td>assertTrue(x)</td>
+<td>核实x 为True</td>
+</tr>
+<tr>
+<td>assertFalse(x)</td>
+<td>核实x 为False</td>
+</tr>
+<tr>
+<td>assertIn(item , list )</td>
+<td>核实 item 在 list 中</td>
+</tr>
+<tr>
+<td>assertNotIn(item , list )</td>
+<td>核实 item 不在 list 中</td>
+</tr>
+</tbody></table>
+<p> 只能在继承<code>unittest.TestCase</code>的类中使用这些方法。</p>
+</li>
+<li><p>方法<code>setUp()</code>:</p>
+<p>如果你在<code>TestCase</code>类中包含了方法<code>setUp()</code>，Python将先运行它，再运行各个以<code>test_</code>打头的方法。这样，在你编写的每个测试方法中都可使用在方法<code>setUp()</code>中创建的对象了。</p>
+<p>下面使用<code>setUp()</code>来创建一个调查对象和一组答案，供方法<code>test_store_single_response()</code>和<code>test_store_three_responses()</code>使用：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> unittest
+<span class="token keyword">from</span> survey <span class="token keyword">import</span> AnonymousSurvey
+
+<span class="token keyword">class</span> <span class="token class-name">TestAnonymousSurvey</span><span class="token punctuation">(</span>unittest<span class="token punctuation">.</span>TestCase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""针对AnonymousSurvey类的测试"""</span>
+    
+    <span class="token keyword">def</span> <span class="token function">setUp</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        创建一个调查对象和一组答案，供使用的测试方法使用
+        """</span>
+        question <span class="token operator">=</span> <span class="token string">"What language did you first learn to speak?"</span>
+        self<span class="token punctuation">.</span>my_survey <span class="token operator">=</span> AnonymousSurvey<span class="token punctuation">(</span>question<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>responses <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'English'</span><span class="token punctuation">,</span> <span class="token string">'Spanish'</span><span class="token punctuation">,</span> <span class="token string">'Mandarin'</span><span class="token punctuation">]</span>
+        
+    <span class="token keyword">def</span> <span class="token function">test_store_single_response</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""测试单个答案会被妥善地存储"""</span>
+        self<span class="token punctuation">.</span>my_survey<span class="token punctuation">.</span>store_response<span class="token punctuation">(</span>self<span class="token punctuation">.</span>responses<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertIn<span class="token punctuation">(</span>self<span class="token punctuation">.</span>responses<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>my_survey<span class="token punctuation">.</span>responses<span class="token punctuation">)</span>
+        
+    <span class="token keyword">def</span> <span class="token function">test_store_three_responses</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""测试三个答案会被妥善地存储"""</span>
+        <span class="token keyword">for</span> response <span class="token keyword">in</span> self<span class="token punctuation">.</span>responses<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>my_survey<span class="token punctuation">.</span>store_response<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> response <span class="token keyword">in</span> self<span class="token punctuation">.</span>responses<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>assertIn<span class="token punctuation">(</span>response<span class="token punctuation">,</span> self<span class="token punctuation">.</span>my_survey<span class="token punctuation">.</span>responses<span class="token punctuation">)</span>
+            
+unittest<span class="token punctuation">.</span>main<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>运行测试用例时，每完成一个单元测试，Python都打印一个字符：测试通过时打印一个句点；测试引发错误时打印一个E；测试导致断言失败时打印一个F。</p>
+</blockquote>
+</li>
 </ul>
 
                 
@@ -482,7 +601,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://billzid.github.io/mo-shi-shi-bie-yu-ji-qi-xue-xi/">https://billzid.github.io/mo-shi-shi-bie-yu-ji-qi-xue-xi/</a>
+                    <a href="https://billzid.github.io/python-zhong-de-dai-ma-ce-shi/">https://billzid.github.io/python-zhong-de-dai-ma-ce-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -520,8 +639,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">机器学习</span>
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/">
+                                    <span class="chip bg-color">代码测试</span>
                                 </a>
                             
                         </div>
@@ -566,7 +689,7 @@
         repo: 'billzid.github.io',
         owner: 'BillZid',
         admin: "BillZid",
-        id: '2022-11-13T20-44-06',
+        id: '2022-11-17T22-26-14',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -861,9 +984,63 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/python-zhong-de-dai-ma-ce-shi/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Python中的代码测试">
+                        
+                        <span class="card-title">Python中的代码测试</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            学习如何使用Python模块unittest中的工具来测试代码
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    自学笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/">
+                        <span class="chip bg-color">代码测试</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/python-zhong-de-lei/">
                     <div class="card-image">
@@ -880,9 +1057,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -904,54 +1081,6 @@
                     
                     <a href="/tags/%E7%B1%BB/">
                         <span class="chip bg-color">类</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/gai-lu-he-tong-ji/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="概率和统计">
-                        
-                        <span class="card-title">概率和统计</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            概率和统计小知识点收集
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-13
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    自学笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%BB%9F%E8%AE%A1/">
-                        <span class="chip bg-color">统计</span>
                     </a>
                     
                 </div>

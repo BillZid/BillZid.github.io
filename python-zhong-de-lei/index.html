@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="模式识别与机器学习, Bill Z的博客">
-    <meta name="description" content="模式识别与机器学习课程笔记">
+    <meta name="keywords" content="Python中的类, Bill Z的博客">
+    <meta name="description" content="一起来感受面向对象编程的魅力">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>模式识别与机器学习 | Bill Z的博客</title>
+    <title>Python中的类 | Bill Z的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -326,12 +326,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">模式识别与机器学习</h1>
+                    <h1 class="description center-align post-title">Python中的类</h1>
                 </div>
             </div>
         </div>
@@ -355,8 +355,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">机器学习</span>
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%B1%BB/">
+                                <span class="chip bg-color">类</span>
                             </a>
                         
                     </div>
@@ -367,8 +371,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-category">
-                                课程笔记
+                            <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="post-category">
+                                自学笔记
                             </a>
                         
                     </div>
@@ -380,7 +384,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-13
+                    2022-11-17
                 </div>
                 
 
@@ -394,14 +398,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    310
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -419,42 +423,181 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="贝叶斯推断"><a href="#贝叶斯推断" class="headerlink" title="贝叶斯推断"></a>贝叶斯推断</h2><ul>
-<li>贝叶斯 诊断推断</li>
-<li>贝叶斯没有真正建模因果，建模的是相关</li>
-<li>可解释性和稳定性</li>
-<li>狗在草地上，结果分类狗建模成了草地</li>
+                <p>一起来感受<code>面向对象编程</code>的魅力</p>
+<h2 id="创建和使用类"><a href="#创建和使用类" class="headerlink" title="创建和使用类"></a>创建和使用类</h2><ul>
+<li><p>创建Dog类</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 括号里是空的，代表从空白创建这个类 为空时是冗余的, 可以被移除</span>
+    <span class="token triple-quoted-string string">"""一次模拟小狗的简单尝试"""</span>
+    
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""初始化属性name和age"""</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+        self<span class="token punctuation">.</span>age <span class="token operator">=</span> age
+        
+    <span class="token keyword">def</span> <span class="token function">sit</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""模拟小狗被命令时蹲下"""</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" is now sitting."</span><span class="token punctuation">)</span>
+        
+    <span class="token keyword">def</span> <span class="token function">roll_over</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""模拟小狗被命令时打滚"""</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" rolled over!"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>方法<code>__init__()</code></p>
+<ul>
+<li><p>是一个特殊的方法，每当根据Dog类创建新实例时，Python都会自动运行它。在这个方法的名称中，开头和末尾各有两个下划线，这是一种约定，旨在避免Python默认方法与普通方法发生名称冲突。</p>
+</li>
+<li><p>我们将方法<code>__init__()</code>定义成了包含三个形参：self 、name 和age。</p>
+</li>
+<li><p>在这个方法的定义中，__形参self 必不可少，还必须位于其他形参的前面__。因为Python调用这个<code>__init__()</code>方法来创建Dog 实例时，将自动传入实参self 。__每个与类相关联的方法调用都自动传递实参self__，它是一个指向实例本身的引用，让实例能够访问类中的属性和方法。</p>
+</li>
+<li><p>我们创建Dog 实例时，Python将调用Dog 类的方法<code>__init__()</code> 。我们将通过实参向Dog() 传递名字和年龄；self 会自动传递，因此我们不需要传递它。每当我们根据Dog 类创建实例时，都只需给最后两个形参（name 和age ）提供值。</p>
+</li>
+<li><p>变量name,age都有前缀self 。以self 为前缀的变量都可供类中的所有方法使用，我们还可以通过类的任何实例来访问这些变量。self.name = name 获取存储在形参name 中的值，并将其存储到变量name 中，然后该变量被关联到当前创建的实例。像这样可通过实例访问的变量称为__属性__。</p>
+</li>
 </ul>
-<h2 id="无监督学习-降维"><a href="#无监督学习-降维" class="headerlink" title="无监督学习-降维"></a>无监督学习-降维</h2><ul>
-<li><p>维数灾难：随着空间维度的增长，数据点越来越分散，以至于距离和密度的概念越来越模糊，没有一种距离函数或相似性函数能避免高维带来的问题<img src="/mo-shi-shi-bie-yu-ji-qi-xue-xi/image-20221114133916187.png"></p>
 </li>
-<li><p>算法用到距离时，就会受到影响</p>
+<li><p>Dog 类还定义了另外两个方法：sit() 和roll_over() 。由于这些方法不需要额外的信息，如名字或年龄，因此它们只有一个形参self。我们后面将创建的实例能够访问这些方法，换句话说，它们都会打印出蹲下和打滚的信息。</p>
 </li>
-<li><p>基本假设：维数可以被压缩，有些维数是无效的</p>
+<li><p>在Python 2.7中创建类时，需要做细微的修改——在括号内包含单词object ：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">ClassName</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+<p> 这让Python 2.7类的行为更像Python 3类，从而简化了你的工作。</p>
 </li>
-<li><p>方法：维度选择 维度抽取   即做映射</p>
+<li><p>根据类创建实例</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+
+my_dog <span class="token operator">=</span> Dog<span class="token punctuation">(</span><span class="token string">'willie'</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_dog<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_dog<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
-<li><p>采样，Johnson-Lindestrauss (JL) embedding lemma</p>
+<li><p>调用方法</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+my_dog <span class="token operator">=</span> Dog<span class="token punctuation">(</span><span class="token string">'willie'</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+my_dog<span class="token punctuation">.</span>sit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+my_dog<span class="token punctuation">.</span>roll_over<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
-<li><p>手工移除特征：冗余的，不相关的，质量差的特征</p>
-</li>
-<li><p>矩阵和矩阵乘法本质上是在做线性变换</p>
-</li>
-<li><p>矩阵分解是将一个矩阵分解为几个矩阵的乘法：高维矩阵的低秩近似</p>
-<p>方阵-特征分解（对角化），非方阵-奇异值分解（SVD)</p>
-<p><img src="/mo-shi-shi-bie-yu-ji-qi-xue-xi/%E7%89%B9%E5%BE%81%E5%80%BC%E7%9A%84%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89.png"></p>
-</li>
-<li><p>MDS算法：由距离矩阵构造一个低维空间</p>
-</li>
-<li><p>PCA降维 &amp; kerner PCA</p>
-</li>
-<li><p>流形学习</p>
-</li>
-<li></li>
+<li><p>也可以同时创建多个实例</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+my_dog <span class="token operator">=</span> Dog<span class="token punctuation">(</span><span class="token string">'willie'</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+your_dog <span class="token operator">=</span> Dog<span class="token punctuation">(</span><span class="token string">'lucy'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_dog<span class="token punctuation">.</span>name<span class="token punctuation">)</span>  <span class="token comment"># 不带括号的是属性，带括号的是方法</span>
+my_dog<span class="token punctuation">.</span>sit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>your_dog<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>your_dog<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+your_dog<span class="token punctuation">.</span>sit<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
-<h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ul>
-<li>因果+神经网络</li>
-<li>对偶问题:转换数据量与数据维度,可不可以综合</li>
+<h2 id="灵活使用类"><a href="#灵活使用类" class="headerlink" title="灵活使用类"></a>灵活使用类</h2><ul>
+<li><p>Car类</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""一次模拟汽车的简单尝试"""</span>
+    
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> make<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+      <span class="token triple-quoted-string string">"""初始化描述汽车的属性"""</span>
+        self<span class="token punctuation">.</span>make <span class="token operator">=</span> make
+        self<span class="token punctuation">.</span>model <span class="token operator">=</span> model
+        self<span class="token punctuation">.</span>year <span class="token operator">=</span> year
+        self<span class="token punctuation">.</span>odometer_reading <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 可以给属性指定默认值</span>
+        
+    <span class="token keyword">def</span> <span class="token function">get_descriptive_name</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""返回整洁的描述性信息"""</span>
+        long_name <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>year<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>make <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>model
+        <span class="token keyword">return</span> long_name<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">def</span> <span class="token function">read_odometer</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""打印一条指出汽车里程的消息"""</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"This car has "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>odometer_reading<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" miles on it."</span><span class="token punctuation">)</span>
+        
+    <span class="token keyword">def</span> <span class="token function">update_odometer</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> mileage<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># milesge是输入的参数</span>
+        <span class="token triple-quoted-string string">"""将里程表读数设置为指定的值"""</span>
+        self<span class="token punctuation">.</span>odometer_reading <span class="token operator">=</span> mileage  <span class="token comment"># 可以用方法修改属性</span>
+        
+my_new_car <span class="token operator">=</span> Car<span class="token punctuation">(</span><span class="token string">'audi'</span><span class="token punctuation">,</span> <span class="token string">'a4'</span><span class="token punctuation">,</span> <span class="token number">2016</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_new_car<span class="token punctuation">.</span>get_descriptive_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+my_new_car<span class="token punctuation">.</span>read_odometer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+my_new_car<span class="token punctuation">.</span>odometer_reading <span class="token operator">=</span> <span class="token number">23</span>  <span class="token comment"># 可以直接访问实例来修改它</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
+<li><p>如果你要编写的类是另一个现成类的特殊版本，可使用继承 。一个类继承 另一个类时，它将自动获得另一个类的所有属性和方法；原有的<br>类称为父类 ，而新类称为子类 。子类继承了其父类的所有属性和方法，同时还可以定义自己的属性和方法。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">ElectricCar</span><span class="token punctuation">(</span>Car<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 定义子类时，必须在括号内指定父类的名称</span>
+    <span class="token triple-quoted-string string">"""电动汽车的独特之处"""</span>
+    
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> make<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""初始化父类的属性"""</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>make<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span>  <span class="token comment"># super()是一个特殊函数，帮助Python将父类和子类关联起来</span>
+
+my_tesla <span class="token operator">=</span> ElectricCar<span class="token punctuation">(</span><span class="token string">'tesla'</span><span class="token punctuation">,</span> <span class="token string">'model s'</span><span class="token punctuation">,</span> <span class="token number">2016</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_tesla<span class="token punctuation">.</span>get_descriptive_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>创建子类时，父类必须包含在当前文件中，且位于子类前面。</p>
+</blockquote>
+</li>
+<li><p>super() 是一个特殊函数，帮助Python将父类和子类关联起来。第5行代码让Python调用ElectricCar的父类的方法<code>__init__()</code> ，让ElectricCar实例包含父类的__所有属性__。父类也称为超类 （superclass），名称super因此而得名。</p>
+</li>
+<li><p>在Python 2.7中，继承语法稍有不同，ElectricCar 类的定义类似于下面这样：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> make<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+        
+<span class="token keyword">class</span> <span class="token class-name">ElectricCar</span><span class="token punctuation">(</span>Car<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> make<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>ElectricCar<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>make<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span>
+        <span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>函数super() 需要两个实参：子类名和对象self 。为帮助Python将父类和子类关联起来，这些实参必不可少。另外，在Python 2.7中使用继承时，务必在定义父类时在括号内指定object。</p>
+</li>
+<li><p>让一个类继承另一个类后，可添加区分子类和父类所需的新属性和方法。</p>
+</li>
+<li><p>对于父类的方法，只要它不符合子类模拟的实物的行为，都可对其进行重写。为此，可在子类中定义一个这样的方法，__即它与要重写的父类方法同名__。这样，Python将不会考虑这个父类方法，而只关注你在子类中定义的相应方法。</p>
+</li>
+<li><p>使用代码模拟实物时，你可能会发现自己给类添加的细节越来越多：属性和方法清单以及文件都越来越长。在这种情况下，可能需要将类的一部分作为一个独立的类提取出来。你可以将大型类拆分成多个协同工作的小类。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token operator">-</span><span class="token operator">-</span>snip<span class="token operator">-</span><span class="token operator">-</span>
+    
+<span class="token keyword">class</span> <span class="token class-name">Battery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""一次模拟电动汽车电瓶的简单尝试"""</span>
+    
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> battery_size<span class="token operator">=</span><span class="token number">70</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""初始化电瓶的属性"""</span>
+        self<span class="token punctuation">.</span>battery_size <span class="token operator">=</span> battery_size
+        
+    <span class="token keyword">def</span> <span class="token function">describe_battery</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""打印一条描述电瓶容量的消息"""</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"This car has a "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>battery_size<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"-kWh battery."</span><span class="token punctuation">)</span>
+        
+<span class="token keyword">class</span> <span class="token class-name">ElectricCar</span><span class="token punctuation">(</span>Car<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""电动汽车的独特之处"""</span>
+    
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> make<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        初始化父类的属性，再初始化电动汽车特有的属性
+        """</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>make<span class="token punctuation">,</span> model<span class="token punctuation">,</span> year<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>battery <span class="token operator">=</span> Battery<span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">)</span>  <span class="token comment"># 可以把一个类的属性定义为另一个类的实例，不需要继承</span>
+
+my_tesla <span class="token operator">=</span> ElectricCar<span class="token punctuation">(</span><span class="token string">'tesla'</span><span class="token punctuation">,</span> <span class="token string">'model s'</span><span class="token punctuation">,</span> <span class="token number">2016</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_tesla<span class="token punctuation">.</span>get_descriptive_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+my_tesla<span class="token punctuation">.</span>battery<span class="token punctuation">.</span>describe_battery<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h2 id="导入类"><a href="#导入类" class="headerlink" title="导入类"></a>导入类</h2><ul>
+<li><p>将Car 类存储在一个名为car.py(一般类的首字母大写驼峰式命名, python文件名下划线式命名)的模块中, 使用该模块的程序都必须使用更具体的文件名，如my_car.py。</p>
+</li>
+<li><p>导入命令:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> car <span class="token keyword">import</span> Car<span class="token punctuation">,</span> ElectricCar
+<span class="token comment"># 或者导入文件中所有模块</span>
+<span class="token keyword">import</span> car<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<blockquote>
+<p> 可以依据导入的模块创建子模块</p>
+</blockquote>
+<ul>
+<li>在类中，可使用一个空行来分隔方法；而在模块中，可使用两个空行来分隔类。</li>
 </ul>
 
                 
@@ -482,7 +625,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://billzid.github.io/mo-shi-shi-bie-yu-ji-qi-xue-xi/">https://billzid.github.io/mo-shi-shi-bie-yu-ji-qi-xue-xi/</a>
+                    <a href="https://billzid.github.io/python-zhong-de-lei/">https://billzid.github.io/python-zhong-de-lei/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -520,8 +663,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">机器学习</span>
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%B1%BB/">
+                                    <span class="chip bg-color">类</span>
                                 </a>
                             
                         </div>
@@ -566,7 +713,7 @@
         repo: 'billzid.github.io',
         owner: 'BillZid',
         admin: "BillZid",
-        id: '2022-11-13T20-44-06',
+        id: '2022-11-17T22-24-41',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -865,18 +1012,18 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/python-zhong-de-lei/">
+                <a href="/python-zhong-de-dai-ma-ce-shi/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Python中的类">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Python中的代码测试">
                         
-                        <span class="card-title">Python中的类</span>
+                        <span class="card-title">Python中的代码测试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一起来感受面向对象编程的魅力
+                            学习如何使用Python模块unittest中的工具来测试代码
                         
                     </div>
                     <div class="publish-info">
@@ -902,8 +1049,8 @@
                         <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/%E7%B1%BB/">
-                        <span class="chip bg-color">类</span>
+                    <a href="/tags/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/">
+                        <span class="chip bg-color">代码测试</span>
                     </a>
                     
                 </div>
@@ -917,18 +1064,18 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/gai-lu-he-tong-ji/">
+                <a href="/mo-shi-shi-bie-yu-ji-qi-xue-xi/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="概率和统计">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="模式识别与机器学习">
                         
-                        <span class="card-title">概率和统计</span>
+                        <span class="card-title">模式识别与机器学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            概率和统计小知识点收集
+                            模式识别与机器学习课程笔记
                         
                     </div>
                     <div class="publish-info">
@@ -939,8 +1086,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    自学笔记
+                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    课程笔记
                                 </a>
                             
                             
@@ -950,8 +1097,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BB%9F%E8%AE%A1/">
-                        <span class="chip bg-color">统计</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
                 </div>
