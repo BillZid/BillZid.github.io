@@ -448,11 +448,11 @@
 </li>
 <li><p>我们将方法<code>__init__()</code>定义成了包含三个形参：self 、name 和age。</p>
 </li>
-<li><p>在这个方法的定义中，__形参self 必不可少，还必须位于其他形参的前面__。因为Python调用这个<code>__init__()</code>方法来创建Dog 实例时，将自动传入实参self 。__每个与类相关联的方法调用都自动传递实参self__，它是一个指向实例本身的引用，让实例能够访问类中的属性和方法。</p>
+<li><p>在这个方法的定义中， <strong>形参self 必不可少，还必须位于其他形参的前面</strong> 。因为Python调用这个<code>__init__()</code>方法来创建Dog 实例时，将自动传入实参self 。 <strong>每个与类相关联的方法调用都自动传递实参self</strong> ，它是一个指向实例本身的引用，让实例能够访问类中的属性和方法。</p>
 </li>
 <li><p>我们创建Dog 实例时，Python将调用Dog 类的方法<code>__init__()</code> 。我们将通过实参向Dog() 传递名字和年龄；self 会自动传递，因此我们不需要传递它。每当我们根据Dog 类创建实例时，都只需给最后两个形参（name 和age ）提供值。</p>
 </li>
-<li><p>变量name,age都有前缀self 。以self 为前缀的变量都可供类中的所有方法使用，我们还可以通过类的任何实例来访问这些变量。self.name = name 获取存储在形参name 中的值，并将其存储到变量name 中，然后该变量被关联到当前创建的实例。像这样可通过实例访问的变量称为__属性__。</p>
+<li><p>变量name,age都有前缀self 。以self 为前缀的变量都可供类中的所有方法使用，我们还可以通过类的任何实例来访问这些变量。self.name = name 获取存储在形参name 中的值，并将其存储到变量name 中，然后该变量被关联到当前创建的实例。像这样可通过实例访问的变量称为 <strong>属性</strong> 。</p>
 </li>
 </ul>
 </li>
@@ -538,7 +538,7 @@ my_tesla <span class="token operator">=</span> ElectricCar<span class="token pun
 <p>创建子类时，父类必须包含在当前文件中，且位于子类前面。</p>
 </blockquote>
 </li>
-<li><p>super() 是一个特殊函数，帮助Python将父类和子类关联起来。第5行代码让Python调用ElectricCar的父类的方法<code>__init__()</code> ，让ElectricCar实例包含父类的__所有属性__。父类也称为超类 （superclass），名称super因此而得名。</p>
+<li><p>super() 是一个特殊函数，帮助Python将父类和子类关联起来。第5行代码让Python调用ElectricCar的父类的方法<code>__init__()</code> ，让ElectricCar实例包含父类的 <strong>所有属性</strong> 。父类也称为超类 （superclass），名称super因此而得名。</p>
 </li>
 <li><p>在Python 2.7中，继承语法稍有不同，ElectricCar 类的定义类似于下面这样：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -554,7 +554,7 @@ my_tesla <span class="token operator">=</span> ElectricCar<span class="token pun
 </li>
 <li><p>让一个类继承另一个类后，可添加区分子类和父类所需的新属性和方法。</p>
 </li>
-<li><p>对于父类的方法，只要它不符合子类模拟的实物的行为，都可对其进行重写。为此，可在子类中定义一个这样的方法，__即它与要重写的父类方法同名__。这样，Python将不会考虑这个父类方法，而只关注你在子类中定义的相应方法。</p>
+<li><p>对于父类的方法，只要它不符合子类模拟的实物的行为，都可对其进行重写。为此，可在子类中定义一个这样的方法， <strong>即它与要重写的父类方法同名</strong> 。这样，Python将不会考虑这个父类方法，而只关注你在子类中定义的相应方法。</p>
 </li>
 <li><p>使用代码模拟实物时，你可能会发现自己给类添加的细节越来越多：属性和方法清单以及文件都越来越长。在这种情况下，可能需要将类的一部分作为一个独立的类提取出来。你可以将大型类拆分成多个协同工作的小类。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -591,14 +591,14 @@ my_tesla<span class="token punctuation">.</span>battery<span class="token punctu
 <li><p>导入命令:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> car <span class="token keyword">import</span> Car<span class="token punctuation">,</span> ElectricCar
 <span class="token comment"># 或者导入文件中所有模块</span>
-<span class="token keyword">import</span> car<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<span class="token keyword">import</span> car<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>在类中，可使用一个空行来分隔方法；而在模块中，可使用两个空行来分隔类。</p>
+</li>
 </ul>
 <blockquote>
 <p> 可以依据导入的模块创建子模块</p>
 </blockquote>
-<ul>
-<li>在类中，可使用一个空行来分隔方法；而在模块中，可使用两个空行来分隔类。</li>
-</ul>
 
                 
             </div>

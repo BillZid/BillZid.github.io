@@ -1,1 +1,17 @@
 /* Here is your custom css styles. */
+@font-face{
+    font-family: 'JetBrainsMono-Medium';
+    src: url('../font/JetBrainsMono-Medium.ttf');
+}
+
+body {
+    font-family: 'JetBrainsMono-Medium';
+}
+
+pre {
+    font-family: 'JetBrainsMono-Medium';
+}
+
+code {
+    font-family: 'JetBrainsMono-Medium';
+}
