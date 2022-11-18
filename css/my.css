@@ -1,17 +1,44 @@
 /* Here is your custom css styles. */
-@font-face{
-    font-family: 'JetBrainsMono-Medium';
-    src: url('../font/JetBrainsMono-Medium.ttf');
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../font/JetBrainsMono-Regular.ttf');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../font/JetBrainsMono-Italic.ttf');
+    font-display: swap;
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../font/JetBrainsMono-Bold.ttf');
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../font/JetBrainsMono-BoldItalic.ttf');
+    font-display: swap;
+    font-weight: bold;
+    font-style: italic;
 }
 
 body {
-    font-family: 'JetBrainsMono-Medium';
+    font-family: 'JetBrains Mono';
 }
 
 pre {
-    font-family: 'JetBrainsMono-Medium';
+    font-family: 'JetBrains Mono';
 }
 
 code {
-    font-family: 'JetBrainsMono-Medium';
+    font-family: 'JetBrains Mono';
 }
