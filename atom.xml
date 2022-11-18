@@ -125,11 +125,11 @@
   </entry>
   
   <entry>
-    <title>seq2seq</title>
+    <title>Seq2Seq</title>
     <link href="https://billzid.github.io/seq2seq/"/>
     <id>https://billzid.github.io/seq2seq/</id>
     <published>2022-11-13T08:16:15.000Z</published>
-    <updated>2022-11-15T13:57:34.249Z</updated>
+    <updated>2022-11-17T16:32:25.000Z</updated>
     
     
       
@@ -149,7 +149,7 @@
     
     <category term="2014-09" scheme="https://billzid.github.io/tags/2014-09/"/>
     
-    <category term="seq2seq" scheme="https://billzid.github.io/tags/seq2seq/"/>
+    <category term="Seq2Seq" scheme="https://billzid.github.io/tags/Seq2Seq/"/>
     
   </entry>
   
@@ -214,11 +214,11 @@
   </entry>
   
   <entry>
-    <title>python</title>
-    <link href="https://billzid.github.io/python/"/>
-    <id>https://billzid.github.io/python/</id>
+    <title>Python笔记</title>
+    <link href="https://billzid.github.io/python-bi-ji/"/>
+    <id>https://billzid.github.io/python-bi-ji/</id>
     <published>2022-10-26T08:52:52.000Z</published>
-    <updated>2022-11-13T12:48:00.111Z</updated>
+    <updated>2022-11-17T16:24:57.000Z</updated>
     
     
       
@@ -236,7 +236,7 @@
     <category term="自学笔记" scheme="https://billzid.github.io/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="python" scheme="https://billzid.github.io/tags/python/"/>
+    <category term="Python" scheme="https://billzid.github.io/tags/Python/"/>
     
   </entry>
   
