@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="模式识别与机器学习, Bill Z的博客">
-    <meta name="description" content="模式识别与机器学习课程笔记">
+    <meta name="keywords" content="存在主义咖啡馆-书摘, Bill Z的博客">
+    <meta name="description" content="自由，在萨特看来，位于人类所有经验的中心...我总是先我自己一步，边前行，边构筑自身...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>模式识别与机器学习 | Bill Z的博客</title>
+    <title>存在主义咖啡馆-书摘 | Bill Z的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -326,12 +326,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">模式识别与机器学习</h1>
+                    <h1 class="description center-align post-title">存在主义咖啡馆-书摘</h1>
                 </div>
             </div>
         </div>
@@ -355,8 +355,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">机器学习</span>
+                            <a href="/tags/%E5%93%B2%E5%AD%A6/">
+                                <span class="chip bg-color">哲学</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89/">
+                                <span class="chip bg-color">存在主义</span>
                             </a>
                         
                     </div>
@@ -367,8 +371,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="post-category">
-                                课程笔记
+                            <a href="/categories/%E4%B9%A6%E6%91%98/" class="post-category">
+                                书摘
                             </a>
                         
                     </div>
@@ -380,7 +384,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-13
+                    2022-11-21
                 </div>
                 
 
@@ -394,14 +398,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    2.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    9 分
                 </div>
                 
 
@@ -419,129 +423,99 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="贝叶斯推断"><a href="#贝叶斯推断" class="headerlink" title="贝叶斯推断"></a>贝叶斯推断</h2><ul>
-<li>贝叶斯 诊断推断</li>
-<li>贝叶斯没有真正建模因果，建模的是相关</li>
-<li>可解释性和稳定性</li>
-<li>狗在草地上，结果分类狗建模成了草地</li>
-</ul>
-<h2 id="无监督学习-降维"><a href="#无监督学习-降维" class="headerlink" title="无监督学习-降维"></a>无监督学习-降维</h2><ul>
-<li><p>维数灾难：随着空间维度的增长，数据点越来越分散，以至于距离和密度的概念越来越模糊，没有一种距离函数或相似性函数能避免高维带来的问题<img src="./image-20221114133916187.png" style="zoom: 33%;"></p>
-</li>
-<li><p>算法用到距离时，就会受到影响</p>
-</li>
-<li><p>基本假设：维数可以被压缩，有些维数是无效的</p>
-</li>
-<li><p>方法：维度选择 维度抽取   即做映射</p>
-</li>
-<li><p>采样，Johnson-Lindestrauss (JL) embedding lemma</p>
-</li>
-<li><p>手工移除特征：冗余的，不相关的，质量差的特征</p>
-</li>
-<li><p>矩阵和矩阵乘法本质上是在做线性变换</p>
-</li>
-<li><p>矩阵分解是将一个矩阵分解为几个矩阵的乘法：高维矩阵的低秩近似</p>
-<p>方阵-特征分解（对角化），非方阵-奇异值分解（SVD)</p>
- <img src="./特征值的几何意义.png" style="zoom:33%;">
-</li>
-<li><p>MDS算法：由距离矩阵构造一个低维空间</p>
-</li>
-<li><p>PCA降维 &amp; kerner PCA</p>
-</li>
-<li><p>流形学习: 高维数据分布在低维流形</p>
-</li>
-</ul>
-<h2 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h2><ul>
-<li><p>当前活跃领域</p>
-</li>
-<li><p>标注数据耗时耗力</p>
-</li>
-<li><p>同一个类别的样本内在服从一致的分布<br>无标注数据能够给出更有意义的分类边界</p>
-<p>“相似” 的数据点有”相似”的标签</p>
-<p>“刚学完,在考试中可以(无答案)复习,因为题目也包含信息”</p>
-</li>
-<li><p>归纳学习和直推学习: 无标注测试数据用不用在训练</p>
-</li>
-<li><p>半监督平滑假设:</p>
-<ul>
-<li>如果高密度空间中两个点 𝑥(1), 𝑥(2) 距离较近, 那么对应的输出𝑦(1), 𝑦(2)也应该接近</li>
-</ul>
-<p>聚类假设</p>
-<ul>
-<li>如果点在同一个簇，那么它们很有可能属于同一个类</li>
-</ul>
-<p>聚类假设的等价公式:</p>
-<ul>
-<li>低密度分隔:决策边界应该在低密度区域</li>
-</ul>
-<p>流形假设:</p>
-<ul>
-<li>高维数据大致会分布在一个低维的流形上</li>
-<li>邻近的样本拥有相似的输出</li>
-<li>邻近的程度常用“相似”程度来刻画</li>
-</ul>
-</li>
-<li><p>自学习: 把高置信的预测加入样本(<code>个人觉得从统计角度无意义,其结果有效性体现在其他方面</code>)</p>
-<p>变体: 把所有(𝑥, 𝑓(𝑥)) 加到标注数据, 为每条数据按置信度赋予权重</p>
-<p>启发式的缓解方案: 如果数据的置信分数低于某个阈值再把它的标签去掉</p>
-</li>
-<li><p>协同训练: </p>
-<ul>
-<li>一个对象的两个视角,图像和HTML文本</li>
-<li>训练两个分类器,交替把结果当作另外一个的标注</li>
-<li>错误不容易被放大(<code>统计角度真的吗</code>)</li>
-</ul>
-<p>假设: </p>
-<ul>
-<li>数据拥有两个充分且条件独立的视图（相容互补性）</li>
-</ul>
-<p><strong>自然的特征分裂可能不存在</strong></p>
-</li>
-<li><p>多视角学习：</p>
-<ul>
-<li>多个分类器，使他们在无标签数据上尽可能一致</li>
-<li>正则化风险最小化框架</li>
-<li>通过强迫多个分类器的预测一致性, 我们减少了搜索空间（真的吗），得到了一些理论结果的支持[Blum and Mitchell, 1998, 周志华 2013]</li>
-</ul>
-</li>
-<li><p>S3VMs</p>
-</li>
-<li><p>生成式模型和聚类标签法（一类取大多数标签）</p>
-</li>
-<li><p>假设越强，风险越高，但收益上限就越高</p>
-</li>
-<li><p>基于图的半监督学习</p>
-<ul>
-<li><p>假设：假定在有标注和无标注数据上存在一个图. 被“紧密”连接的点趋向于有相同的标签—&gt;流形假设</p>
-</li>
-<li><p>标签传播：临近节点有相似的标签</p>
-</li>
-<li><p>最小割：割成两边，一边一类，有多项式时间解法。</p>
-</li>
-<li><p>标签传播方式：<strong>调和函数法</strong>(电子网络解释，随机游走解释)–&gt; <code>平稳分布？</code> 不能处理新的测试数据</p>
-</li>
-<li><p>局部和全局一致性方法：引入标注数据（全局）和图能量（局部）之间的平衡</p>
- <img src="./image-20221121160005182.png" style="zoom:33%;"></li>
-</ul>
-</li>
-<li><p>半监督聚类、</p>
-</li>
-<li><p>深度学习早期：无监督（无标签数据构建网络）+有监督（网络到标签）–预训练就是这样</p>
-</li>
-<li><p>半监督+GAN</p>
-   <img src="./image-20221121161256310.png" style="zoom: 50%;"></li>
-</ul>
-<h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ul>
-<li><p>因果+神经网络</p>
-</li>
-<li><p>对偶问题:转换数据量与数据维度,可不可以综合</p>
-</li>
-<li><p>自学习: 把高置信的预测加入样本(个人觉得从统计角度无意义,其结果有效性体现在其他方面)</p>
+                <img src="cover.jpg" width="70%">
+
 <blockquote>
-<p>从以前思考的无穷次硬币策略考虑, 很多策略只是把一小部分极限风险忽略了,机器学习背后的统计。。。</p>
+<p>共计：1本书·40篇书摘 填坑中…<br>日期：2022年11月21日</p>
+</blockquote>
+<p>感兴趣可以深入阅读原文: <a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/V7y9rMrFaAY">epub</a></p>
+<h2 id="《存在主义咖啡馆——自由、存在和杏子鸡尾酒-莎拉·贝克韦尔-》"><a href="#《存在主义咖啡馆——自由、存在和杏子鸡尾酒-莎拉·贝克韦尔-》" class="headerlink" title="《存在主义咖啡馆——自由、存在和杏子鸡尾酒 (莎拉·贝克韦尔)》"></a>《存在主义咖啡馆——自由、存在和杏子鸡尾酒 (莎拉·贝克韦尔)》</h2><ul>
+<li><p>自由，在萨特看来，位于人类所有经验的中心，正是这一点，才把人类与其他事物区分开来。其他事物只能在某处待着，听凭摆布。萨特相信，就连人之外的动物，大多数时候也只是在听从塑造了它们那个物种的本能和习性行事。但作为一个人，我根本没有预先被决定的本性。我的本性，要通过我选择去做什么来创造。当然，我可能会被我的生物性影响，或者被我所处的文化和个人背景等方面影响，但这些并不能合成一张用来制造我的完整蓝图。我总是先我自己一步，边前行，边构筑自身。</p>
+</li>
+<li><p>——“存在先于本质”</p>
+</li>
+<li><p>你可能认为你可以用一些标签定义我，但你错了，因为我始终会是一件正在加工的作品。我不断地通过行动创造自身，这一点根深蒂固地存在于我的人类境遇之中，以至于在萨特看来，它本身就是人类境遇，</p>
+</li>
+<li><p>你是自由的人，那就去选择吧——也就是说，去创造（invent）。</p>
+</li>
+<li><p>如果你为了逃避责任，便自欺欺人地认为自己是环境或者什么糟糕建议的受害者，那你便没有达到人类生命的要求，而是选择了一种虚假的存在，脱离了你自己的“真实性”。</p>
+</li>
+<li><p>萨特的存在主义暗示的是，只要你一直努力，那就有可能获得真实与自由</p>
+</li>
+<li><p>任何划定的道路来引导人去救赎自己；他必须不断创造自己的道路。但是，创造道路，他便拥有了自由与责任，失去了推脱的借口，而所有希望都存在于他本身之中。</p>
+</li>
+<li><p>创造道路，他便拥有了自由与责任，失去了推脱的借口，而所有希望都存在于他本身之中。</p>
+</li>
+<li><p>但令人惊讶的是，马克思主义者也讨厌它。现在，萨特常常被认为是一名共产主义的支持者，但在很长时间里，他其实一直不被他们所接受。说到底，如果人们坚持认为自己是自由的个体，那么怎么可能会有组织得当的革命？</p>
+<blockquote>
+<p>有待商榷</p>
 </blockquote>
 </li>
-<li></li>
+<li><p>“存在主义者”便成了任何践行自由性爱和熬夜伴着爵士乐跳舞的人的简单代名词。</p>
+</li>
+<li><p>从20世纪40年代中期开始，“存在主义者”便成了任何践行自由性爱和熬夜伴着爵士乐跳舞的人的简单代名词。</p>
+</li>
+<li><p>“我的人生与我的哲学是同一的”，他曾在日记里这么写道，并且他坚定地恪守这条原则。</p>
+</li>
+<li><p>克尔凯郭尔写道：“忧虑是自由的眩晕。”在他和萨特看来，我们整个人生都处在悬崖峭壁的边缘。</p>
+</li>
+<li><p>他是通往所有这些传统的一座桥梁。然而，他却一辈子都坚持认为，真正重要的不是过去，而是未来。一个人必须不断前行，创造还未发生的事：走到世界中，行动起来，然后去影响它。他对未来的信念一直坚定不移，甚至在他进入古稀之年，身体渐衰，仅存的视力丧失殆尽。</p>
+</li>
+<li><p>萨特教会了我如何放弃——这种回应世界的方式被低估了，有时其实挺有用</p>
+</li>
+<li><p>比如，结构主义人类学家克劳德·李维-史陀，就曾以一种特别轻蔑的语调写道，基于个人体验的哲学是“女店员的形而上学”</p>
+</li>
+<li><p>读这些书时，尤其看到书上那个年轻时的我写下的奇奇怪怪的强调批注，我产生了一种与二十岁的自己再次融为一体的怪异感觉。</p>
+</li>
+<li><p>若是如此，那么重访那些大胆和活跃的存在主义者，一定能在某种程度上更新我们的视角。他们可没有坐着玩弄他们那些“能指”，而是提出了大问题，追问着在还有很多其他人同样在努力生活的世界里，过一种真诚、完满的人类生活意味着什么。</p>
+</li>
+<li><p>随着过去一个世纪中，人们对脑科学和人体化学日益精密的理解，他们同样追问了人是什么。如果我们受制于神经元和荷尔蒙，那么如何依然确信我们是自由的？是什么把人和其他动物区分开来？仅仅是程度的不同，还是在某些方面能被真正区分开？我们该如何思考自身？</p>
+</li>
+<li><p>现象这个词有着一个特定的含义：它指的是任一普通事物或客体或事件，按照它向我的经验呈现的自身的样子，而不是依照在现实中可能是或可能不是的样子</p>
+</li>
+<li><p>胡塞尔因此说道，为了从现象学角度描述一杯咖啡，我必须搁置抽象的假设和任何干扰性的情绪联想。然后，我就可以专注于我面前这深色、芬芳、浓郁的现象。</p>
+</li>
+<li><p>那些我们通常不认为是哲学内容的事物上，它尤其有效：一杯饮料、一首忧郁的歌、一次兜风、一抹余晖、一种不安的情绪、一盒相片、一个无聊的时刻。它通过掉转我们自己通常如空气般被忽略的视角，恢复了个人世界的丰富性</p>
+</li>
+<li><p>从科学主义到宗教原教旨主义，再到法西斯主义。一切都在悬搁判断中被放到了一边——它们无权干涉事物本身。如果处理正确的话，这会给现象学带来一种惊人的变革色彩。</p>
+</li>
+<li><p>雅斯贝尔斯写道，“在掌握过程中，这种思考方式会提醒我、唤醒我、带我回到自身、改变我”。</p>
+</li>
+<li><p>他们相信，我们不需要试图去找出人的心灵是什么，仿佛它是某种实体一样。相反，我们需要考虑心灵做了什么，以及它如何领会经验。</p>
+</li>
+<li><p>他写道：在爱中，某物被爱；在恨中，某物被恨；在判断中，某物被确认或否认。甚至当我想象一个不存在的对象时，我的精神结构仍然具有“关涉性”（about-ness）或“从属性”（of-ness）。</p>
+</li>
+<li><p>我的心灵总是忙于这种关涉性：它具有“意向性”（intentionality）。</p>
+</li>
+<li><p>以这种方式来理解的话，心灵几乎根本什么都不是：它就是它的关涉性。这</p>
+</li>
+<li><p>这一点让人的心灵（还可能有些动物的心灵），不同于任何其他自然出现的实体。没有别的东西能够那么彻底地像心灵那样关涉或属于事物：就连一本书，也仅仅会向某个拿起来并细读了它的人，揭示这本书“关涉”了什么，而在其他时候，这本书就只是个存储设备</p>
+</li>
+<li><p>胡塞尔发现，意向性的观念，在某种程度上可以回避哲学史上两个大的未解之谜：对象“究竟”是什么的问题，和心灵“究竟”是什么的问题。通过悬搁，以及括除来自这两个问题的所有对实在性的思考，人们可以自由地专注于中间的关系。</p>
+</li>
+<li><p>对萨特来说，这给予了心灵一种巨大的自由。如果我们只是我们的所思所想，那么就不存在什么预设的“内在本性”来阻止我们。我们是变化的。</p>
+</li>
+<li><p>因为意识没有“内在”。它只是它自身的外表，正是这种绝对的逃离，这种对成为物质的拒绝，使它成为一种意识。</p>
+<blockquote>
+<p>相当有启发</p>
+</blockquote>
+</li>
+<li><p>对于萨特来说，如果我们试图把自己关进我们的心灵之内，关进“一间百叶窗紧闭、漂亮温暖的房间里”，那我们就会停止存在。</p>
+</li>
+<li><p>胡塞尔很早之前就已经考虑到一种可能性，那就是整个意向性之舞同样可以被简单地理解为发生在一个人的内在领域之中。由于悬搁判断悬置了关于事物是否为真的问题，所以没有什么能妨碍这种阐释。真或假，内或外，有什么区别吗？反思了这一点之后，胡塞尔开始把他的现象学转变为一种“唯心论”（idealism）的分支——这种哲学传统拒绝承认外部实在性，并把一切事物定义为一种个人幻觉。</p>
+</li>
+<li><p>在“是/存在”所有令人困惑的地方中，最令人困惑的是人们竟然对它感到充分的困惑。我会说，“天是蓝的”，或“我是开心的”，仿佛中间的那个小小的字一点儿都不重要。</p>
+</li>
+<li><p>这并不意味着我应该报名参加人类科学的课程，诸如生物学、人类学、心理学或社会学。这些“形而下的”（ontical）研究对本体论研究毫无贡献。就像被胡塞尔的悬搁判断清走的推测的残骸一样，它们也会用无关的概念来阻塞我们的探究，很可能只是在碍事。</p>
+</li>
+<li><p>不过，海德格尔再次强调说，这并不意味着我应该报名参加人类科学的课程，诸如生物学、人类学、心理学或社会学。这些“形而下的”（ontical）研究对本体论研究毫无贡献。就像被胡塞尔的悬搁判断清走的推测的残骸一样，它们也会用无关的概念来阻塞我们的探究，很可能只是在碍事。</p>
+</li>
+<li><p>此在的日常在世存在的主要特征是，它通常在忙着做什么事。我一般不会倾向于沉思事物；我会把它们拿起来，然后用它们来做事。</p>
+</li>
+<li><p>海德格尔是哲学的伟大转向者。在《存在与时间》中，日常存在——而非触不可及的宇宙论或数学——才是最“本体论的”东西。实际的操劳与操心，比反思更为原始。有用性先于沉思，“当下上手状态”先于“现成在手状态”，“在世存在”和“与他人共在”先于“独自存在”。我们不是在纷繁复杂的世界上空盘旋，从上往下凝视，而是已经在这个世界上，并且参与其中——我们“被抛”到这里。而“被抛性”必定是我们的起点。</p>
+</li>
+<li><p>他的起点是穿着日常服装的实在，但却用克尔凯郭尔式的语气谈论着生命中最奇怪的经历，谈论一切开始发生可怕错误的时刻，甚至谈论我们会面对的最严重的不公正——死亡的可能性——的时刻。</p>
+</li>
 </ul>
 
                 
@@ -569,7 +543,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://billzid.github.io/mo-shi-shi-bie-yu-ji-qi-xue-xi/">https://billzid.github.io/mo-shi-shi-bie-yu-ji-qi-xue-xi/</a>
+                    <a href="https://billzid.github.io/cun-zai-zhu-yi-ka-pei-guan-shu-zhai/">https://billzid.github.io/cun-zai-zhu-yi-ka-pei-guan-shu-zhai/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -607,8 +581,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">机器学习</span>
+                                <a href="/tags/%E5%93%B2%E5%AD%A6/">
+                                    <span class="chip bg-color">哲学</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89/">
+                                    <span class="chip bg-color">存在主义</span>
                                 </a>
                             
                         </div>
@@ -653,7 +631,7 @@
         repo: 'billzid.github.io',
         owner: 'BillZid',
         admin: "BillZid",
-        id: '2022-11-13T20-44-06',
+        id: '2022-11-21T19-33-42',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -948,28 +926,82 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/python-zhong-de-lei/">
+                <a href="/cun-zai-zhu-yi-ka-pei-guan-shu-zhai/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Python中的类">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="存在主义咖啡馆-书摘">
                         
-                        <span class="card-title">Python中的类</span>
+                        <span class="card-title">存在主义咖啡馆-书摘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一起来感受面向对象编程的魅力
+                            自由，在萨特看来，位于人类所有经验的中心...我总是先我自己一步，边前行，边构筑自身...
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-17
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E4%B9%A6%E6%91%98/" class="post-category">
+                                    书摘
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%93%B2%E5%AD%A6/">
+                        <span class="chip bg-color">哲学</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89/">
+                        <span class="chip bg-color">存在主义</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/python-zhong-de-dai-ma-ce-shi/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Python中的代码测试">
+                        
+                        <span class="card-title">Python中的代码测试</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            学习如何使用Python模块unittest中的工具来测试代码
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -989,56 +1021,8 @@
                         <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/%E7%B1%BB/">
-                        <span class="chip bg-color">类</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/gai-lu-he-tong-ji/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="概率和统计">
-                        
-                        <span class="card-title">概率和统计</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            概率和统计小知识点收集
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-13
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    自学笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%BB%9F%E8%AE%A1/">
-                        <span class="chip bg-color">统计</span>
+                    <a href="/tags/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/">
+                        <span class="chip bg-color">代码测试</span>
                     </a>
                     
                 </div>
