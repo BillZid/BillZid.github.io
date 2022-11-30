@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>BERT</title>
+      <link href="/bert/"/>
+      <url>/bert/</url>
+      
+        <content type="html"><![CDATA[<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><a href="BERT%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.pdf">思维导图下载链接</a></p><div class="row">    <embed src="BERT思维导图.pdf" width="100%" height="550" type="application/pdf"></div><h2 id="原文-amp-个人批注"><a href="#原文-amp-个人批注" class="headerlink" title="原文 &amp; 个人批注"></a>原文 &amp; 个人批注</h2><p><a href="BERT.pdf">pdf下载链接</a></p><h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><p>暂略</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文粗读 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NLP </tag>
+            
+            <tag> Mask </tag>
+            
+            <tag> BERT </tag>
+            
+            <tag> 预训练 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>存在主义咖啡馆-书摘</title>
       <link href="/cun-zai-zhu-yi-ka-pei-guan-shu-zhai/"/>
       <url>/cun-zai-zhu-yi-ka-pei-guan-shu-zhai/</url>
@@ -89,7 +120,7 @@
       <link href="/mo-shi-shi-bie-yu-ji-qi-xue-xi/"/>
       <url>/mo-shi-shi-bie-yu-ji-qi-xue-xi/</url>
       
-        <content type="html"><![CDATA[<h2 id="贝叶斯推断"><a href="#贝叶斯推断" class="headerlink" title="贝叶斯推断"></a>贝叶斯推断</h2><ul><li>贝叶斯 诊断推断</li><li>贝叶斯没有真正建模因果，建模的是相关</li><li>可解释性和稳定性</li><li>狗在草地上，结果分类狗建模成了草地</li></ul><h2 id="无监督学习-降维"><a href="#无监督学习-降维" class="headerlink" title="无监督学习-降维"></a>无监督学习-降维</h2><ul><li><p>维数灾难：随着空间维度的增长，数据点越来越分散，以至于距离和密度的概念越来越模糊，没有一种距离函数或相似性函数能避免高维带来的问题<img src="./image-20221114133916187.png" style="zoom: 33%;"></p></li><li><p>算法用到距离时，就会受到影响</p></li><li><p>基本假设：维数可以被压缩，有些维数是无效的</p></li><li><p>方法：维度选择 维度抽取   即做映射</p></li><li><p>采样，Johnson-Lindestrauss (JL) embedding lemma</p></li><li><p>手工移除特征：冗余的，不相关的，质量差的特征</p></li><li><p>矩阵和矩阵乘法本质上是在做线性变换</p></li><li><p>矩阵分解是将一个矩阵分解为几个矩阵的乘法：高维矩阵的低秩近似</p><p>方阵-特征分解（对角化），非方阵-奇异值分解（SVD)</p> <img src="./特征值的几何意义.png" style="zoom:33%;"></li><li><p>MDS算法：由距离矩阵构造一个低维空间</p></li><li><p>PCA降维 &amp; kerner PCA</p></li><li><p>流形学习: 高维数据分布在低维流形</p></li></ul><h2 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h2><ul><li><p>当前活跃领域</p></li><li><p>标注数据耗时耗力</p></li><li><p>同一个类别的样本内在服从一致的分布<br>无标注数据能够给出更有意义的分类边界</p><p>“相似” 的数据点有”相似”的标签</p><p>“刚学完,在考试中可以(无答案)复习,因为题目也包含信息”</p></li><li><p>归纳学习和直推学习: 无标注测试数据用不用在训练</p></li><li><p>半监督平滑假设:</p><ul><li>如果高密度空间中两个点 𝑥(1), 𝑥(2) 距离较近, 那么对应的输出𝑦(1), 𝑦(2)也应该接近</li></ul><p>聚类假设</p><ul><li>如果点在同一个簇，那么它们很有可能属于同一个类</li></ul><p>聚类假设的等价公式:</p><ul><li>低密度分隔:决策边界应该在低密度区域</li></ul><p>流形假设:</p><ul><li>高维数据大致会分布在一个低维的流形上</li><li>邻近的样本拥有相似的输出</li><li>邻近的程度常用“相似”程度来刻画</li></ul></li><li><p>自学习: 把高置信的预测加入样本(<code>个人觉得从统计角度无意义,其结果有效性体现在其他方面</code>)</p><p>变体: 把所有(𝑥, 𝑓(𝑥)) 加到标注数据, 为每条数据按置信度赋予权重</p><p>启发式的缓解方案: 如果数据的置信分数低于某个阈值再把它的标签去掉</p></li><li><p>协同训练: </p><ul><li>一个对象的两个视角,图像和HTML文本</li><li>训练两个分类器,交替把结果当作另外一个的标注</li><li>错误不容易被放大(<code>统计角度真的吗</code>)</li></ul><p>假设: </p><ul><li>数据拥有两个充分且条件独立的视图（相容互补性）</li></ul><p><strong>自然的特征分裂可能不存在</strong></p></li><li><p>多视角学习：</p><ul><li>多个分类器，使他们在无标签数据上尽可能一致</li><li>正则化风险最小化框架</li><li>通过强迫多个分类器的预测一致性, 我们减少了搜索空间（真的吗），得到了一些理论结果的支持[Blum and Mitchell, 1998, 周志华 2013]</li></ul></li><li><p>S3VMs</p></li><li><p>生成式模型和聚类标签法（一类取大多数标签）</p></li><li><p>假设越强，风险越高，但收益上限就越高</p></li><li><p>基于图的半监督学习</p><ul><li><p>假设：假定在有标注和无标注数据上存在一个图. 被“紧密”连接的点趋向于有相同的标签—&gt;流形假设</p></li><li><p>标签传播：临近节点有相似的标签</p></li><li><p>最小割：割成两边，一边一类，有多项式时间解法。</p></li><li><p>标签传播方式：<strong>调和函数法</strong>(电子网络解释，随机游走解释)–&gt; <code>平稳分布？</code> 不能处理新的测试数据</p></li><li><p>局部和全局一致性方法：引入标注数据（全局）和图能量（局部）之间的平衡</p> <img src="./image-20221121160005182.png" style="zoom:33%;"></li></ul></li><li><p>半监督聚类、</p></li><li><p>深度学习早期：无监督（无标签数据构建网络）+有监督（网络到标签）–预训练就是这样</p></li><li><p>半监督+GAN</p>   <img src="./image-20221121161256310.png" style="zoom: 50%;"></li></ul><h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ul><li><p>因果+神经网络</p></li><li><p>对偶问题:转换数据量与数据维度,可不可以综合</p></li><li><p>自学习: 把高置信的预测加入样本(个人觉得从统计角度无意义,其结果有效性体现在其他方面)</p><blockquote><p>从以前思考的无穷次硬币策略考虑, 很多策略只是把一小部分极限风险忽略了,机器学习背后的统计。。。</p></blockquote></li><li></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="贝叶斯推断"><a href="#贝叶斯推断" class="headerlink" title="贝叶斯推断"></a>贝叶斯推断</h2><ul><li>贝叶斯 诊断推断</li><li>贝叶斯没有真正建模因果，建模的是相关</li><li>可解释性和稳定性</li><li>狗在草地上，结果分类狗建模成了草地</li></ul><h2 id="无监督学习-降维"><a href="#无监督学习-降维" class="headerlink" title="无监督学习-降维"></a>无监督学习-降维</h2><ul><li><p>维数灾难：随着空间维度的增长，数据点越来越分散，以至于距离和密度的概念越来越模糊，没有一种距离函数或相似性函数能避免高维带来的问题<img src="./image-20221114133916187.png" style="zoom: 33%;"></p></li><li><p>算法用到距离时，就会受到影响</p></li><li><p>基本假设：维数可以被压缩，有些维数是无效的</p></li><li><p>方法：维度选择 维度抽取   即做映射</p></li><li><p>采样，Johnson-Lindestrauss (JL) embedding lemma</p></li><li><p>手工移除特征：冗余的，不相关的，质量差的特征</p></li><li><p>矩阵和矩阵乘法本质上是在做线性变换</p></li><li><p>矩阵分解是将一个矩阵分解为几个矩阵的乘法：高维矩阵的低秩近似</p><p>方阵-特征分解（对角化），非方阵-奇异值分解（SVD)</p> <img src="./特征值的几何意义.png" style="zoom:33%;"></li><li><p>MDS算法：由距离矩阵构造一个低维空间</p></li><li><p>PCA降维 &amp; kerner PCA</p></li><li><p>流形学习: 高维数据分布在低维流形</p></li></ul><h2 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h2><ul><li><p>当前活跃领域</p></li><li><p>标注数据耗时耗力</p></li><li><p>同一个类别的样本内在服从一致的分布<br>无标注数据能够给出更有意义的分类边界</p><p>“相似” 的数据点有”相似”的标签</p><p>“刚学完,在考试中可以(无答案)复习,因为题目也包含信息”</p></li><li><p>归纳学习和直推学习: 无标注测试数据用不用在训练</p></li><li><p>半监督平滑假设:</p><ul><li>如果高密度空间中两个点 𝑥(1), 𝑥(2) 距离较近, 那么对应的输出𝑦(1), 𝑦(2)也应该接近</li></ul><p>聚类假设</p><ul><li>如果点在同一个簇，那么它们很有可能属于同一个类</li></ul><p>聚类假设的等价公式:</p><ul><li>低密度分隔:决策边界应该在低密度区域</li></ul><p>流形假设:</p><ul><li>高维数据大致会分布在一个低维的流形上</li><li>邻近的样本拥有相似的输出</li><li>邻近的程度常用“相似”程度来刻画</li></ul></li><li><p>自学习: 把高置信的预测加入样本(<code>个人觉得从统计角度无意义,其结果有效性体现在其他方面</code>)</p><p>变体: 把所有(𝑥, 𝑓(𝑥)) 加到标注数据, 为每条数据按置信度赋予权重</p><p>启发式的缓解方案: 如果数据的置信分数低于某个阈值再把它的标签去掉</p></li><li><p>协同训练: </p><ul><li>一个对象的两个视角,图像和HTML文本</li><li>训练两个分类器,交替把结果当作另外一个的标注</li><li>错误不容易被放大(<code>统计角度真的吗</code>)</li></ul><p>假设: </p><ul><li>数据拥有两个充分且条件独立的视图（相容互补性）</li></ul><p><strong>自然的特征分裂可能不存在</strong></p></li><li><p>多视角学习：</p><ul><li>多个分类器，使他们在无标签数据上尽可能一致</li><li>正则化风险最小化框架</li><li>通过强迫多个分类器的预测一致性, 我们减少了搜索空间（真的吗），得到了一些理论结果的支持[Blum and Mitchell, 1998, 周志华 2013]</li></ul></li><li><p>S3VMs</p></li><li><p>生成式模型和聚类标签法（一类取大多数标签）</p></li><li><p>假设越强，风险越高，但收益上限就越高</p></li><li><p>基于图的半监督学习</p><ul><li><p>假设：假定在有标注和无标注数据上存在一个图. 被“紧密”连接的点趋向于有相同的标签—&gt;流形假设</p></li><li><p>标签传播：临近节点有相似的标签</p></li><li><p>最小割：割成两边，一边一类，有多项式时间解法。</p></li><li><p>标签传播方式：<strong>调和函数法</strong>(电子网络解释，随机游走解释)–&gt; <code>平稳分布？</code> 不能处理新的测试数据</p></li><li><p>局部和全局一致性方法：引入标注数据（全局）和图能量（局部）之间的平衡</p> <img src="./image-20221121160005182.png" style="zoom:33%;"></li></ul></li><li><p>半监督聚类、</p></li><li><p>深度学习早期：无监督（无标签数据构建网络）+有监督（网络到标签）–预训练就是这样</p></li><li><p>半监督+GAN</p>   <img src="./image-20221121161256310.png" style="zoom: 50%;"></li></ul><h2 id="概率图模型"><a href="#概率图模型" class="headerlink" title="概率图模型"></a>概率图模型</h2><ul><li>概率图模型 = 概率 + 结构</li><li>条件独立问题:图分离</li><li>有向图条件独立:贝叶斯球算法(规则)</li><li>参数化的方式或者利用条件独立陈述来对联合概率分布进行描述是等价的！</li><li>仅从数据无法看出因果，要做干预</li><li>无向图条件独立：朴素图分割理论</li><li>是否可以把无向图转化为有向图？是否可以把有向图转化为无向图？好像都不可以</li></ul><h2 id="独立于算法的机器学习"><a href="#独立于算法的机器学习" class="headerlink" title="独立于算法的机器学习"></a>独立于算法的机器学习</h2><ul><li>终极算法</li><li>进化是也倾向简单的模式(耗费更低)</li><li></li></ul><h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ul><li><p>因果+神经网络</p></li><li><p>对偶问题:转换数据量与数据维度,可不可以综合</p></li><li><p>自学习: 把高置信的预测加入样本(个人觉得从统计角度无意义,其结果有效性体现在其他方面)</p><blockquote><p>从以前思考的无穷次硬币策略考虑, 很多策略只是把一小部分极限风险忽略了,机器学习背后的统计。。。</p></blockquote></li><li><p>缩小图片,检测不同尺度的人脸</p></li></ul>]]></content>
       
       
       <categories>
@@ -139,7 +170,7 @@
       <link href="/sequence-to-sequence-learning/"/>
       <url>/sequence-to-sequence-learning/</url>
       
-        <content type="html"><![CDATA[<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><a href="%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.pdf">思维导图下载链接</a></p><div class="row">    <embed src="思维导图.pdf" width="100%" height="550" type="application/pdf"></div><h2 id="原文-amp-个人批注"><a href="#原文-amp-个人批注" class="headerlink" title="原文 &amp; 个人批注"></a>原文 &amp; 个人批注</h2><p><a href="seq2seq.pdf">pdf下载链接</a></p><h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><p>暂略</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><a href="Seq2Seq%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.pdf">思维导图下载链接</a></p><div class="row">    <embed src="Seq2Seq思维导图.pdf" width="100%" height="550" type="application/pdf"></div><h2 id="原文-amp-个人批注"><a href="#原文-amp-个人批注" class="headerlink" title="原文 &amp; 个人批注"></a>原文 &amp; 个人批注</h2><p><a href="Seq2Seq.pdf">pdf下载链接</a></p><h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><p>暂略</p>]]></content>
       
       
       <categories>

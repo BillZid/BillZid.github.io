@@ -6,7 +6,7 @@
   <link href="https://billzid.github.io/atom.xml" rel="self"/>
   
   <link href="https://billzid.github.io/"/>
-  <updated>2022-11-21T13:16:23.348Z</updated>
+  <updated>2022-11-30T08:26:27.726Z</updated>
   <id>https://billzid.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BERT</title>
+    <link href="https://billzid.github.io/bert/"/>
+    <id>https://billzid.github.io/bert/</id>
+    <published>2022-11-30T08:20:05.000Z</published>
+    <updated>2022-11-30T08:26:27.726Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;思维导图&quot;&gt;&lt;a href=&quot;#思维导图&quot; class=&quot;headerlink&quot; title=&quot;思维导图&quot;&gt;&lt;/a&gt;思维导图&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="论文粗读" scheme="https://billzid.github.io/categories/%E8%AE%BA%E6%96%87%E7%B2%97%E8%AF%BB/"/>
+    
+    
+    <category term="NLP" scheme="https://billzid.github.io/tags/NLP/"/>
+    
+    <category term="Mask" scheme="https://billzid.github.io/tags/Mask/"/>
+    
+    <category term="BERT" scheme="https://billzid.github.io/tags/BERT/"/>
+    
+    <category term="预训练" scheme="https://billzid.github.io/tags/%E9%A2%84%E8%AE%AD%E7%BB%83/"/>
+    
+  </entry>
   
   <entry>
     <title>存在主义咖啡馆-书摘</title>
@@ -109,7 +140,7 @@
     <link href="https://billzid.github.io/mo-shi-shi-bie-yu-ji-qi-xue-xi/"/>
     <id>https://billzid.github.io/mo-shi-shi-bie-yu-ji-qi-xue-xi/</id>
     <published>2022-11-13T12:44:06.000Z</published>
-    <updated>2022-11-21T08:13:31.661Z</updated>
+    <updated>2022-11-28T08:11:53.540Z</updated>
     
     
       
@@ -161,7 +192,7 @@
     <link href="https://billzid.github.io/sequence-to-sequence-learning/"/>
     <id>https://billzid.github.io/sequence-to-sequence-learning/</id>
     <published>2022-11-13T08:16:15.000Z</published>
-    <updated>2022-11-19T04:29:13.492Z</updated>
+    <updated>2022-11-30T08:24:07.730Z</updated>
     
     
       
