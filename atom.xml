@@ -6,7 +6,7 @@
   <link href="https://billzid.github.io/atom.xml" rel="self"/>
   
   <link href="https://billzid.github.io/"/>
-  <updated>2023-02-26T11:29:11.117Z</updated>
+  <updated>2023-02-28T15:29:51.595Z</updated>
   <id>https://billzid.github.io/</id>
   
   <author>
@@ -15,6 +15,137 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>情感计算课程笔记</title>
+    <link href="https://billzid.github.io/qing-gan-ji-suan-ke-cheng-bi-ji/"/>
+    <id>https://billzid.github.io/qing-gan-ji-suan-ke-cheng-bi-ji/</id>
+    <published>2023-02-28T15:27:43.000Z</published>
+    <updated>2023-02-28T15:29:51.595Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;第二节课&quot;&gt;&lt;a href=&quot;#第二节课&quot; class=&quot;headerlink&quot; title=&quot;第二节课&quot;&gt;&lt;/a&gt;第二节课&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;基本情感论模型，如</summary>
+        
+      
+    
+    
+    
+    <category term="课程笔记" scheme="https://billzid.github.io/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="情感计算" scheme="https://billzid.github.io/tags/%E6%83%85%E6%84%9F%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习课程笔记</title>
+    <link href="https://billzid.github.io/shen-du-xue-xi-ke-cheng-bi-ji/"/>
+    <id>https://billzid.github.io/shen-du-xue-xi-ke-cheng-bi-ji/</id>
+    <published>2023-02-28T15:27:35.000Z</published>
+    <updated>2023-02-28T15:31:07.697Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;第二节（思考-学长经验）&quot;&gt;&lt;a href=&quot;#第二节（思考-学长经验）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="课程笔记" scheme="https://billzid.github.io/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="深度学习" scheme="https://billzid.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="神经网络" scheme="https://billzid.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>知识图谱课程笔记</title>
+    <link href="https://billzid.github.io/zhi-shi-tu-pu-ke-cheng-bi-ji/"/>
+    <id>https://billzid.github.io/zhi-shi-tu-pu-ke-cheng-bi-ji/</id>
+    <published>2023-02-28T15:27:27.000Z</published>
+    <updated>2023-02-28T15:34:07.149Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;知识工程：数据和信息 → 知识&lt;/li&gt;
+&lt;li&gt;互联网大数据&amp;amp;行业大数据&lt;/li&gt;
+&lt;li&gt;现实 认知 语言</summary>
+        
+      
+    
+    
+    
+    <category term="课程笔记" scheme="https://billzid.github.io/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="知识图谱" scheme="https://billzid.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>知识管理课程笔记</title>
+    <link href="https://billzid.github.io/zhi-shi-guan-li-ke-cheng-bi-ji/"/>
+    <id>https://billzid.github.io/zhi-shi-guan-li-ke-cheng-bi-ji/</id>
+    <published>2023-02-28T15:27:21.000Z</published>
+    <updated>2023-02-28T15:33:56.441Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;第一节：概述&quot;&gt;&lt;a href=&quot;#第一节：概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="课程笔记" scheme="https://billzid.github.io/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="知识管理" scheme="https://billzid.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>国科大2023春课程目录收集</title>
+    <link href="https://billzid.github.io/guo-ke-da-2023-chun-ke-cheng-mu-lu-shou-ji/"/>
+    <id>https://billzid.github.io/guo-ke-da-2023-chun-ke-cheng-mu-lu-shou-ji/</id>
+    <published>2023-02-28T15:25:09.000Z</published>
+    <updated>2023-02-28T15:50:53.976Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;人工智能学院&quot;&gt;&lt;a href=&quot;#人工智能学院&quot; class=&quot;headerlink&quot; title=&quot;人工智能学院&quot;&gt;&lt;/a&gt;人工智能学院&lt;/h2&gt;&lt;h3 id=&quot;多智能体系统&quot;&gt;&lt;a href=&quot;#多智能体系统&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="资料整理" scheme="https://billzid.github.io/categories/%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/"/>
+    
+    
+    <category term="课程摘要" scheme="https://billzid.github.io/tags/%E8%AF%BE%E7%A8%8B%E6%91%98%E8%A6%81/"/>
+    
+  </entry>
   
   <entry>
     <title>AI经管交叉研讨会-chatGPT</title>
