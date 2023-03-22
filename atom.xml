@@ -6,7 +6,7 @@
   <link href="https://billzid.github.io/atom.xml" rel="self"/>
   
   <link href="https://billzid.github.io/"/>
-  <updated>2023-02-28T15:29:51.595Z</updated>
+  <updated>2023-03-22T06:04:03.482Z</updated>
   <id>https://billzid.github.io/</id>
   
   <author>
@@ -17,18 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>邹至庄讲坛纪荣嵘-大模型</title>
+    <link href="https://billzid.github.io/zou-zhi-zhuang-jiang-tan-ji-rong-rong-da-mo-xing/"/>
+    <id>https://billzid.github.io/zou-zhi-zhuang-jiang-tan-ji-rong-rong-da-mo-xing/</id>
+    <published>2023-03-22T05:43:26.000Z</published>
+    <updated>2023-03-22T06:04:03.482Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;会议主题：“邹至庄讲座”学术论坛&quot;&gt;&lt;a href=&quot;#会议主题：“邹至庄讲座”学术论坛&quot; class=&quot;headerlink&quot; title=&quot;会议主题：“邹至庄讲座”学术论坛&quot;&gt;&lt;/a&gt;会议主题：“邹至庄讲座”学术论坛&lt;/h2&gt;&lt;p&gt;会议号：479 3348</summary>
+        
+      
+    
+    
+    
+    <category term="会议纪要" scheme="https://billzid.github.io/categories/%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81/"/>
+    
+    
+    <category term="chatGPT" scheme="https://billzid.github.io/tags/chatGPT/"/>
+    
+    <category term="大模型" scheme="https://billzid.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>情感计算课程笔记</title>
     <link href="https://billzid.github.io/qing-gan-ji-suan-ke-cheng-bi-ji/"/>
     <id>https://billzid.github.io/qing-gan-ji-suan-ke-cheng-bi-ji/</id>
     <published>2023-02-28T15:27:43.000Z</published>
-    <updated>2023-02-28T15:29:51.595Z</updated>
+    <updated>2023-03-13T05:37:45.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;第二节课&quot;&gt;&lt;a href=&quot;#第二节课&quot; class=&quot;headerlink&quot; title=&quot;第二节课&quot;&gt;&lt;/a&gt;第二节课&lt;/h2&gt;&lt;ul&gt;
+    <summary type="html">&lt;h2 id=&quot;情感模型基础&quot;&gt;&lt;a href=&quot;#情感模型基础&quot; class=&quot;headerlink&quot; title=&quot;情感模型基础&quot;&gt;&lt;/a&gt;情感模型基础&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;基本情感论模型，如</summary>
         
       
@@ -74,7 +101,7 @@
     <link href="https://billzid.github.io/zhi-shi-tu-pu-ke-cheng-bi-ji/"/>
     <id>https://billzid.github.io/zhi-shi-tu-pu-ke-cheng-bi-ji/</id>
     <published>2023-02-28T15:27:27.000Z</published>
-    <updated>2023-03-06T12:15:46.000Z</updated>
+    <updated>2023-03-20T13:16:54.000Z</updated>
     
     
       
@@ -102,7 +129,7 @@
     <link href="https://billzid.github.io/zhi-shi-guan-li-ke-cheng-bi-ji/"/>
     <id>https://billzid.github.io/zhi-shi-guan-li-ke-cheng-bi-ji/</id>
     <published>2023-02-28T15:27:21.000Z</published>
-    <updated>2023-03-09T02:08:49.000Z</updated>
+    <updated>2023-03-21T02:03:58.000Z</updated>
     
     
       
@@ -153,7 +180,7 @@
     <link href="https://billzid.github.io/ai-jing-guan-jiao-cha-yan-tao-hui-chatgpt/"/>
     <id>https://billzid.github.io/ai-jing-guan-jiao-cha-yan-tao-hui-chatgpt/</id>
     <published>2023-02-26T08:48:05.000Z</published>
-    <updated>2023-02-26T11:29:11.117Z</updated>
+    <updated>2023-03-22T05:46:29.125Z</updated>
     
     
       
@@ -170,6 +197,10 @@
     
     
     <category term="经济管理" scheme="https://billzid.github.io/tags/%E7%BB%8F%E6%B5%8E%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="chatGPT" scheme="https://billzid.github.io/tags/chatGPT/"/>
+    
+    <category term="大模型" scheme="https://billzid.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     
   </entry>
   
