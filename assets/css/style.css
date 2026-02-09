@@ -486,6 +486,12 @@ strong {
   color: #334155;
 }
 
+.tag.rep {
+  border-color: rgba(234, 179, 8, 0.35);
+  background: rgba(234, 179, 8, 0.12);
+  color: #854d0e;
+}
+
 .pub-list {
   margin: 0;
   padding-left: 1.15em;
