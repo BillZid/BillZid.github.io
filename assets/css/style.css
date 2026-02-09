@@ -1,25 +1,25 @@
 :root {
-  --bg0: #f7f7fb;
+  --bg0: #f8f9fa;
   --bg1: #ffffff;
 
-  --ink: #101828;
-  --muted: #475467;
-  --soft: #667085;
-  --line: rgba(16, 24, 40, 0.14);
+  --ink: #1a1a2e;
+  --muted: #4a5568;
+  --soft: #718096;
+  --line: rgba(0, 0, 0, 0.1);
 
-  --card: rgba(255, 255, 255, 0.82);
-  --shadow: 0 18px 55px rgba(16, 24, 40, 0.12);
+  --card: rgba(255, 255, 255, 0.88);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 6px 24px rgba(0, 0, 0, 0.06);
 
-  --accent: #0b4f6c;
-  --accent-weak: rgba(11, 79, 108, 0.12);
-  --accent-warm: #d04a02;
+  --accent: #1a5276;
+  --accent-weak: rgba(26, 82, 118, 0.1);
+  --accent-warm: #c0392b;
 
-  --radius: 18px;
-  --max: 1120px;
-  --side: 340px;
+  --radius: 10px;
+  --max: 1080px;
+  --side: 300px;
 
   --font-ui: "IBM Plex Sans", "Noto Sans SC", sans-serif;
-  --font-body: "Source Serif 4", serif;
+  --font-body: "IBM Plex Sans", "Noto Sans SC", sans-serif;
 }
 
 *,
@@ -37,21 +37,18 @@ body {
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 14px;
-  background:
-    radial-gradient(900px 520px at 12% 8%, rgba(11, 79, 108, 0.12), transparent 60%),
-    radial-gradient(820px 520px at 88% 20%, rgba(208, 74, 2, 0.10), transparent 62%),
-    linear-gradient(180deg, var(--bg0), var(--bg1));
+  background: var(--bg0);
 }
 
 a {
   color: var(--accent);
-  text-decoration-color: rgba(11, 79, 108, 0.35);
+  text-decoration-color: rgba(26, 82, 118, 0.3);
   text-underline-offset: 3px;
 }
 
 a:hover {
-  color: #08384c;
-  text-decoration-color: rgba(11, 79, 108, 0.6);
+  color: #0e3a54;
+  text-decoration-color: rgba(26, 82, 118, 0.5);
 }
 
 strong {
@@ -81,7 +78,7 @@ strong {
   top: 0;
   z-index: 30;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(248, 249, 250, 0.85);
   border-bottom: 1px solid var(--line);
 }
 
@@ -110,7 +107,7 @@ strong {
 }
 
 .brand:hover .brand__name {
-  background: rgba(11, 79, 108, 0.08);
+  background: rgba(26, 82, 118, 0.06);
 }
 
 .nav-toggle {
@@ -156,12 +153,12 @@ strong {
 }
 
 .nav a:hover {
-  background: rgba(11, 79, 108, 0.08);
-  color: #0b3448;
+  background: rgba(26, 82, 118, 0.06);
+  color: #0e3a54;
 }
 
 .nav a[aria-current="page"] {
-  background: rgba(11, 79, 108, 0.12);
+  background: rgba(26, 82, 118, 0.1);
   color: var(--ink);
 }
 
@@ -195,8 +192,8 @@ strong {
   display: block;
   width: 120px;
   height: 120px;
-  border-radius: 26px;
-  border: 1px solid rgba(16, 24, 40, 0.12);
+  border-radius: 12px;
+  border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.75);
 }
 
@@ -260,8 +257,8 @@ strong {
 }
 
 .pill:hover {
-  border-color: rgba(11, 79, 108, 0.22);
-  background: rgba(11, 79, 108, 0.06);
+  border-color: rgba(26, 82, 118, 0.2);
+  background: rgba(26, 82, 118, 0.05);
 }
 
 .pill__icon {
@@ -386,9 +383,9 @@ strong {
 }
 
 .clean-list li {
-  padding: 12px 12px;
-  border-radius: 16px;
-  border: 1px solid rgba(16, 24, 40, 0.12);
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.55);
   display: flex;
   flex-wrap: wrap;
@@ -411,6 +408,11 @@ strong {
   color: var(--muted);
 }
 
+.clean-list li.highlight {
+  border-color: rgba(202, 138, 4, 0.4);
+  background: rgba(234, 179, 8, 0.08);
+}
+
 .tag {
   display: inline-flex;
   align-items: center;
@@ -427,8 +429,8 @@ strong {
 }
 
 .tag.iclr {
-  border-color: rgba(208, 74, 2, 0.3);
-  background: rgba(208, 74, 2, 0.10);
+  border-color: rgba(180, 60, 0, 0.25);
+  background: rgba(180, 60, 0, 0.08);
   color: #7a2e00;
 }
 
@@ -546,9 +548,9 @@ strong {
 }
 
 .timeline__item {
-  padding: 14px 14px;
-  border-radius: 16px;
-  border: 1px solid rgba(16, 24, 40, 0.12);
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.55);
   display: grid;
   grid-template-columns: 150px 1fr;
@@ -584,9 +586,9 @@ strong {
 }
 
 .edu__item {
-  padding: 14px 14px;
-  border-radius: 16px;
-  border: 1px solid rgba(16, 24, 40, 0.12);
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.55);
 }
 
