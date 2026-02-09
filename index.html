@@ -64,60 +64,26 @@
     <main class="main" id="content">
       <aside class="sidebar reveal">
         <section class="card profile" aria-label="Profile">
-          <img
-            class="avatar"
-            src="assets/img/avatar.svg"
-            width="120"
-            height="120"
-            alt="Monogram avatar"
-            loading="eager"
-          />
+          <div class="avatar-placeholder"></div>
 
           <div class="profile__title">
             <h1 class="profile__name">
               Wenzhen Zheng
               <span class="profile__name-zh" lang="zh-Hans">郑文镇</span>
             </h1>
-            <p class="profile__subtitle">LLM pretraining · scaling laws · NLP</p>
+            <p class="profile__subtitle">LLM Pretraining / Scaling Laws / NLP</p>
           </div>
 
           <div class="quicklinks" aria-label="Links">
-            <a class="pill" href="mailto:zhengwenzhen@amss.ac.cn">
-              <span class="pill__icon" aria-hidden="true">✉</span>
-              Email
-            </a>
-            <a class="pill" href="https://scholar.google.com/citations?user=sJFhCJQAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">
-              <span class="pill__icon" aria-hidden="true">🎓</span>
-              Scholar
-            </a>
-            <a class="pill" href="https://github.com/BillZid" target="_blank" rel="noopener noreferrer">
-              <span class="pill__icon" aria-hidden="true">↗</span>
-              GitHub
-            </a>
+            <a class="pill" href="mailto:zhengwenzhen@amss.ac.cn">Email</a>
+            <a class="pill" href="https://scholar.google.com/citations?user=sJFhCJQAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a class="pill" href="https://github.com/BillZid" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
 
           <dl class="meta">
-            <dt>Phone</dt>
-            <dd><a href="tel:+8615662652636">15662652636</a></dd>
             <dt>Email</dt>
             <dd><a href="mailto:zhengwenzhen@amss.ac.cn">zhengwenzhen@amss.ac.cn</a></dd>
-            <dt>Age</dt>
-            <dd>23</dd>
           </dl>
-
-          <div class="counter" aria-label="Visitor counter">
-            <span id="busuanzi_container_site_uv" class="counter__item" style="display: none">
-              Visitors <span id="busuanzi_value_site_uv"></span>
-            </span>
-            <span id="busuanzi_container_site_pv" class="counter__item" style="display: none">
-              Views <span id="busuanzi_value_site_pv"></span>
-            </span>
-          </div>
-
-          <p class="profile__note">
-            Served via GitHub Pages at
-            <a href="https://billzid.github.io/" target="_blank" rel="noopener noreferrer">billzid.github.io</a>.
-          </p>
         </section>
       </aside>
 
@@ -125,32 +91,21 @@
         <section class="card section reveal" id="about" aria-label="About">
           <header class="section__header">
             <h2>About</h2>
-            <p class="section__kicker">Bio</p>
           </header>
 
           <p>
-            I work on <strong>large language model pretraining</strong>, <strong>scaling laws</strong> and efficient
-            training/inference recipes. I received my M.S. in NLP from the University of Chinese Academy of Sciences
-            (UCAS), and my B.S. in Mathematics and Applied Mathematics from Shandong University.
+            I am currently working on foundation model pretraining at <a href="https://www.stepfun.com/" target="_blank" rel="noopener noreferrer">StepFun</a>.
+            My research interests include <strong>large language model pretraining</strong>, <strong>scaling laws</strong>, and <strong>efficient training/inference</strong>.
           </p>
           <p>
-            I enjoy bridging <em>theory</em> (scaling laws, optimization) and <em>practice</em> (data, systems, training at
-            scale). Feel free to reach out if you'd like to collaborate.
+            I received my M.S. from the <a href="http://www.amss.ac.cn/" target="_blank" rel="noopener noreferrer">Academy of Mathematics and Systems Science, Chinese Academy of Sciences</a>,
+            and my B.S. in Mathematics from <a href="https://www.sdu.edu.cn/" target="_blank" rel="noopener noreferrer">Shandong University</a>.
           </p>
-
-          <div class="callout" role="note" aria-label="Highlight">
-            <div class="callout__title">ICLR 2026 highlight</div>
-            <div class="callout__body">
-              Two papers accepted at <strong>ICLR 2026</strong>, including an <strong>ORAL</strong> on
-              <em>Mixture-of-Experts vs. Dense LLMs under strictly equal resources</em>.
-            </div>
-          </div>
         </section>
 
         <section class="card section reveal" id="news" aria-label="News">
           <header class="section__header">
             <h2>News</h2>
-            <p class="section__kicker">Selected updates</p>
           </header>
 
           <ul class="clean-list">
@@ -192,9 +147,7 @@
         <section class="card section reveal" id="publications" aria-label="Publications">
           <header class="section__header">
             <h2>Publications</h2>
-            <p class="section__kicker">
-              * equal contribution. Your name is bolded.
-            </p>
+            <p class="section__kicker">* equal contribution</p>
           </header>
 
           <ol class="pub-list">
@@ -257,13 +210,11 @@
               <div class="pub__row">
                 <div class="pub__title">Scaling Laws for Code: A More Data-Hungry Regime</div>
                 <div class="pub__badges">
-                  <span class="tag preprint">ACL 2026</span>
-                  <span class="tag preprint">Submitted</span>
+                  <span class="tag preprint">Preprint</span>
                 </div>
               </div>
               <div class="pub__meta">
                 <span class="pub__authors">Xianzhen Luo*, <strong>Wenzhen Zheng</strong>*, Qingfu Zhu, Rongyi Zhang, Houyi Li, Siming Huang, YuanTao Fan, Wanxiang Che</span>
-                <span class="muted"> (Rebuttal rating: 3.67/5)</span>
               </div>
             </li>
 
@@ -352,7 +303,6 @@
         <section class="card section reveal" id="experience" aria-label="Experience">
           <header class="section__header">
             <h2>Experience</h2>
-            <p class="section__kicker">Brief (company + focus)</p>
           </header>
 
           <div class="timeline">
@@ -360,13 +310,12 @@
               <div class="timeline__when">2024.12 – Present</div>
               <div class="timeline__what">
                 <div class="timeline__title">
-                  <strong>StepFun (阶跃星辰)</strong> · Foundation Model Pretraining (supervised by Xiangyu Zhang)
+                  <strong>StepFun (阶跃星辰)</strong> · Foundation Model Pretraining
                 </div>
                 <div class="timeline__desc">
-                  Key projects:
-                  <a href="https://arxiv.org/abs/2507.19427" target="_blank" rel="noopener noreferrer">Step-3</a>,
-                  <a href="https://step_agent_vis.iap.platform.shaipower.com/preview_step3p5_turbo_page/" target="_blank" rel="noopener noreferrer">Step-3.5 Flash results</a>,
-                  <a href="https://github.com/stepfun-ai/Step-3.5-Flash/blob/main/step_3p5_flash_tech_report.pdf" target="_blank" rel="noopener noreferrer">Step-3.5 Flash Tech Report (PDF)</a>.
+                  Contributed to
+                  <a href="https://arxiv.org/abs/2507.19427" target="_blank" rel="noopener noreferrer">Step-3</a> and
+                  <a href="https://github.com/stepfun-ai/Step-3.5-Flash/blob/main/step_3p5_flash_tech_report.pdf" target="_blank" rel="noopener noreferrer">Step-3.5 Flash</a>.
                 </div>
               </div>
             </div>
@@ -374,7 +323,7 @@
             <div class="timeline__item">
               <div class="timeline__when">2024.05 – 2024.10</div>
               <div class="timeline__what">
-                <div class="timeline__title"><strong>Meituan (美团)</strong> · LLM Pretraining · LongCat Interaction Team</div>
+                <div class="timeline__title"><strong>Meituan (美团)</strong> · LLM Pretraining</div>
               </div>
             </div>
 
@@ -382,9 +331,6 @@
               <div class="timeline__when">2023.07 – 2024.03</div>
               <div class="timeline__what">
                 <div class="timeline__title"><strong>Langboat Technology (澜舟科技)</strong> · Foundation Model Pretraining</div>
-                <div class="timeline__desc">
-                  Mengzi model with strong leaderboard results (e.g., SuperCLUE #4, C-Eval #1, CMMLU #1 in 2023.08).
-                </div>
               </div>
             </div>
           </div>
@@ -393,27 +339,20 @@
         <section class="card section reveal" id="education" aria-label="Education">
           <header class="section__header">
             <h2>Education</h2>
-            <p class="section__kicker">Training</p>
           </header>
 
           <div class="edu">
             <div class="edu__item">
-              <div class="edu__title"><strong>University of Chinese Academy of Sciences (UCAS)</strong> · M.S. (NLP)</div>
-              <div class="edu__meta">2022.09 – 2025.06 · GPA: 3.83 / 4.00</div>
+              <div class="edu__title"><strong>University of Chinese Academy of Sciences</strong> · M.S.</div>
+              <div class="edu__meta">2022.09 – 2025.06</div>
               <div class="edu__desc">
-                State Key Laboratory of Mathematical Sciences, Academy of Mathematics and Systems Science, Chinese Academy of Sciences.
-              </div>
-              <div class="edu__desc muted">
-                Coursework: NLP, Pattern Recognition, Knowledge Graph, Reinforcement Learning, Convex Optimization, Stochastic Processes.
+                Academy of Mathematics and Systems Science, Chinese Academy of Sciences.
               </div>
             </div>
 
             <div class="edu__item">
-              <div class="edu__title"><strong>Shandong University</strong> · B.S. (Mathematics &amp; Applied Mathematics)</div>
-              <div class="edu__meta">2018.09 – 2022.06 · National Base Class · A+ discipline</div>
-              <div class="edu__desc muted">
-                Coursework: Real/Complex Analysis, Modern Algebra, Operations Research (100), Mathematical Statistics (99), Topology, Functional Analysis, Differential Geometry.
-              </div>
+              <div class="edu__title"><strong>Shandong University</strong> · B.S. in Mathematics</div>
+              <div class="edu__meta">2018.09 – 2022.06</div>
             </div>
           </div>
         </section>
@@ -421,7 +360,6 @@
         <section class="card section reveal" id="awards" aria-label="Awards and honors">
           <header class="section__header">
             <h2>Awards &amp; Honors</h2>
-            <p class="section__kicker">Selected</p>
           </header>
 
           <ul class="clean-list">
@@ -443,8 +381,6 @@
       </div>
     </main>
 
-    <!-- Busuanzi visitor counter -->
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   </body>
 </html>
 
