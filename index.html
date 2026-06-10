@@ -52,9 +52,9 @@
 
         <nav class="nav" id="site-nav" aria-label="Primary">
           <a href="#about">About</a>
+          <a href="#experience">Experience</a>
           <a href="#news">News</a>
           <a href="#publications">Publications</a>
-          <a href="#experience">Experience</a>
           <a href="#education">Education</a>
           <a href="#awards">Awards</a>
         </nav>
@@ -62,8 +62,8 @@
     </header>
 
     <main class="main" id="content">
-      <aside class="sidebar reveal">
-        <section class="card profile" aria-label="Profile">
+      <div class="content">
+        <section class="card profile reveal" aria-label="Profile">
           <img
             class="avatar"
             src="https://avatars.githubusercontent.com/u/45631691?v=4"
@@ -92,9 +92,7 @@
             <dd><a href="mailto:zhengwenzhen@amss.ac.cn">zhengwenzhen@amss.ac.cn</a></dd>
           </dl>
         </section>
-      </aside>
 
-      <div class="content">
         <section class="card section reveal" id="about" aria-label="About">
           <header class="section__header">
             <h2>About</h2>
@@ -108,6 +106,55 @@
             I received my M.S. from the <a href="http://www.amss.ac.cn/" target="_blank" rel="noopener noreferrer">Academy of Mathematics and Systems Science, Chinese Academy of Sciences</a>,
             and my B.S. in Mathematics from <a href="https://www.sdu.edu.cn/" target="_blank" rel="noopener noreferrer">Shandong University</a>.
           </p>
+        </section>
+
+        <section class="card section reveal" id="experience" aria-label="Experience">
+          <header class="section__header">
+            <h2>Experience</h2>
+          </header>
+
+          <div class="timeline">
+            <div class="timeline__item">
+              <div class="timeline__when">2026.05 – Present</div>
+              <div class="timeline__what">
+                <div class="timeline__title">
+                  <strong>Seed LLM Pretrain Team</strong> · LLM Pretraining
+                </div>
+                <div class="timeline__desc">
+                  Working on foundation model pretraining, scaling behavior, optimization recipes, and training stability.
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <div class="timeline__when">2024.12 – 2026.05</div>
+              <div class="timeline__what">
+                <div class="timeline__title">
+                  <strong>StepFun (阶跃星辰)</strong> · Foundation Model Pretraining
+                </div>
+                <div class="timeline__desc">
+                  Advised by <a href="https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Xiangyu Zhang</a>.
+                  Contributed to
+                  <a href="https://arxiv.org/abs/2507.19427" target="_blank" rel="noopener noreferrer">Step-3</a> and
+                  <a href="https://github.com/stepfun-ai/Step-3.5-Flash/blob/main/step_3p5_flash_tech_report.pdf" target="_blank" rel="noopener noreferrer">Step-3.5 Flash</a>.
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <div class="timeline__when">2024.05 – 2024.10</div>
+              <div class="timeline__what">
+                <div class="timeline__title"><strong>Meituan (美团)</strong> · LLM Pretraining <span class="tag conf">Intern</span></div>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <div class="timeline__when">2023.07 – 2024.03</div>
+              <div class="timeline__what">
+                <div class="timeline__title"><strong>Langboat Technology (澜舟科技)</strong> · Foundation Model Pretraining <span class="tag conf">Intern</span></div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="card section reveal" id="news" aria-label="News">
@@ -363,55 +410,6 @@
               </div>
             </li>
           </ol>
-        </section>
-
-        <section class="card section reveal" id="experience" aria-label="Experience">
-          <header class="section__header">
-            <h2>Experience</h2>
-          </header>
-
-          <div class="timeline">
-            <div class="timeline__item">
-              <div class="timeline__when">2026.05 – Present</div>
-              <div class="timeline__what">
-                <div class="timeline__title">
-                  <strong>Seed LLM Pretrain Team</strong> · LLM Pretraining
-                </div>
-                <div class="timeline__desc">
-                  Working on foundation model pretraining, scaling behavior, optimization recipes, and training stability.
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline__item">
-              <div class="timeline__when">2024.12 – 2026.05</div>
-              <div class="timeline__what">
-                <div class="timeline__title">
-                  <strong>StepFun (阶跃星辰)</strong> · Foundation Model Pretraining
-                </div>
-                <div class="timeline__desc">
-                  Advised by <a href="https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Xiangyu Zhang</a>.
-                  Contributed to
-                  <a href="https://arxiv.org/abs/2507.19427" target="_blank" rel="noopener noreferrer">Step-3</a> and
-                  <a href="https://github.com/stepfun-ai/Step-3.5-Flash/blob/main/step_3p5_flash_tech_report.pdf" target="_blank" rel="noopener noreferrer">Step-3.5 Flash</a>.
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline__item">
-              <div class="timeline__when">2024.05 – 2024.10</div>
-              <div class="timeline__what">
-                <div class="timeline__title"><strong>Meituan (美团)</strong> · LLM Pretraining <span class="tag conf">Intern</span></div>
-              </div>
-            </div>
-
-            <div class="timeline__item">
-              <div class="timeline__when">2023.07 – 2024.03</div>
-              <div class="timeline__what">
-                <div class="timeline__title"><strong>Langboat Technology (澜舟科技)</strong> · Foundation Model Pretraining <span class="tag conf">Intern</span></div>
-              </div>
-            </div>
-          </div>
         </section>
 
         <section class="card section reveal" id="education" aria-label="Education">

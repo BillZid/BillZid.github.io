@@ -15,8 +15,7 @@
   --accent-warm: #c0392b;
 
   --radius: 10px;
-  --max: 1080px;
-  --side: 300px;
+  --max: 920px;
 
   --font-ui: "IBM Plex Sans", "Noto Sans SC", sans-serif;
   --font-body: "IBM Plex Sans", "Noto Sans SC", sans-serif;
@@ -166,15 +165,6 @@ strong {
   max-width: var(--max);
   margin: 0 auto;
   padding: 18px 16px 64px;
-  display: grid;
-  grid-template-columns: var(--side) 1fr;
-  gap: 22px;
-  align-items: start;
-}
-
-.sidebar {
-  position: sticky;
-  top: 78px;
 }
 
 .card {
@@ -186,19 +176,24 @@ strong {
 
 .profile {
   padding: 18px 18px 16px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px 18px;
+  align-items: center;
 }
 
 .avatar {
   display: block;
   width: 120px;
   height: 120px;
+  grid-row: 1 / span 3;
   border-radius: 12px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.75);
 }
 
 .profile__title {
-  margin-top: 12px;
+  margin: 0;
 }
 
 .profile__name {
@@ -226,7 +221,7 @@ strong {
 }
 
 .quicklinks {
-  margin-top: 16px;
+  margin-top: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -259,8 +254,8 @@ strong {
 }
 
 .meta {
-  margin: 14px 0 0;
-  padding-top: 14px;
+  margin: 0;
+  padding-top: 10px;
   border-top: 1px dashed rgba(16, 24, 40, 0.18);
   display: grid;
   grid-template-columns: 50px 1fr;
@@ -308,6 +303,8 @@ strong {
 
 .content {
   min-width: 0;
+  display: grid;
+  gap: 18px;
 }
 
 .section {
@@ -639,14 +636,6 @@ strong {
 }
 
 @media (max-width: 940px) {
-  .main {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    position: static;
-  }
-
   .timeline__item {
     grid-template-columns: 1fr;
   }
@@ -684,6 +673,14 @@ strong {
   .date {
     min-width: 0;
   }
+
+  .profile {
+    grid-template-columns: 1fr;
+  }
+
+  .avatar {
+    grid-row: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -697,4 +694,3 @@ strong {
     transition: none;
   }
 }
-
