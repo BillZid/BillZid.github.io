@@ -153,14 +153,6 @@ a:hover {
   letter-spacing: 0;
 }
 
-.profile__name-zh {
-  display: inline-block;
-  margin-left: 14px;
-  font-family: "Noto Sans SC", var(--font-ui);
-  font-size: clamp(1.1rem, 2.3vw, 1.6rem);
-  color: var(--soft);
-}
-
 .profile__subtitle {
   max-width: 760px;
   margin: 16px 0 0;
@@ -505,10 +497,6 @@ a:hover {
 .profile__name {
   font-size: clamp(1.7rem, 2.65vw, 2.6rem);
   line-height: 1;
-}
-
-.profile__name-zh {
-  font-size: clamp(0.88rem, 1.1vw, 1rem);
 }
 
 .profile__subtitle {
